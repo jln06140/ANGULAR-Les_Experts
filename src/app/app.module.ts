@@ -10,6 +10,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { NavigationComponent } from './view/navigation/navigation.component';
 import { DashboardComponent } from './view/dashboard/dashboard.component';
 import { LoginComponent } from './view/login/login.component';
+import { TableCaseComponent } from './view/tables/table-case/table-case.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { LoginComponent } from './view/login/login.component';
     NavigationComponent,
     DashboardComponent,
     LoginComponent,
+    TableCaseComponent,
   ],
   imports: [
     BrowserModule,

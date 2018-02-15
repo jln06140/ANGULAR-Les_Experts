@@ -1,3 +1,5 @@
+// import des Modules Angular Material vers app-module.ts
+
 import { NgModule } from '@angular/core';
 import {
     MatCardModule,
@@ -8,7 +10,8 @@ import {
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatTableModule
 } from '@angular/material';
 
 @NgModule({
@@ -23,7 +26,8 @@ import {
         MatInputModule,
         MatButtonModule,
         MatSelectModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatTableModule
     ],
     exports: [
         MatCardModule,
@@ -34,7 +38,8 @@ import {
         MatInputModule,
         MatButtonModule,
         MatSelectModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatTableModule
     ],
   })
   export class MaterialModule { }

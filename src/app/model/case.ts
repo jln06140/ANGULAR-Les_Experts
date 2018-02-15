@@ -8,6 +8,7 @@ import { Tag } from './tag';
 
 export interface Case {
     id: number;
+    date: string;
     name: string;
     comment: string;
     listUser: User[];
