@@ -11,6 +11,12 @@ import { NavigationComponent } from './view/navigation/navigation.component';
 import { LoginComponent } from './view/login/login.component';
 import { TableCaseComponent } from './view/tables/table-case/table-case.component';
 import { PageDashboardComponent } from './view/pages/page-dashboard/page-dashboard.component';
+import { TableWeaponComponent } from './view/tables/table-weapon/table-weapon.component';
+import { TableVehiculeComponent } from './view/tables/table-vehicule/table-vehicule.component';
+import { TablePieceofevidenceComponent } from './view/tables/table-pieceofevidence/table-pieceofevidence.component';
+import { TableWitnessComponent } from './view/tables/table-witness/table-witness.component';
+import { TableVictimComponent } from './view/tables/table-victim/table-victim.component';
+import { TableSuspectComponent } from './view/tables/table-suspect/table-suspect.component';
 
 
 @NgModule({
@@ -19,7 +25,13 @@ import { PageDashboardComponent } from './view/pages/page-dashboard/page-dashboa
     NavigationComponent,
     LoginComponent,
     TableCaseComponent,
-    PageDashboardComponent
+    PageDashboardComponent,
+    TableWeaponComponent,
+    TableVehiculeComponent,
+    TablePieceofevidenceComponent,
+    TableWitnessComponent,
+    TableVictimComponent,
+    TableSuspectComponent
   ],
   imports: [
     BrowserModule,
