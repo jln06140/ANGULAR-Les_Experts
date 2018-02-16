@@ -11,7 +11,7 @@ export interface Vehicule {
     color: string;
     licensePlate: string;
     description: string;
-    listComment: Comment;
+    listComment: Comment[];
     listPhoto: Photo[];
     listCase: Case [];
     listTag: Tag[];

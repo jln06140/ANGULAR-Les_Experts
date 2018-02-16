@@ -12,7 +12,7 @@ export interface Case {
     date: string;
     name: string;
     description: string;
-    listComment: Comment;
+    listComment: Comment[];
     listUser: User[];
     listPhoto: Photo[];
     listPoE: PieceOfEvidence[];

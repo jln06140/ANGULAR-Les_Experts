@@ -7,7 +7,7 @@ export interface Photo {
     date: string;
     name: string;
     description: string;
-    listComment: Comment;
+    listComment: Comment[];
     url: string;
     listCase: Case[];
     listTag: Tag[];

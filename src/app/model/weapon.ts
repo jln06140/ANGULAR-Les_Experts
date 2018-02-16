@@ -10,7 +10,7 @@ export interface Weapon {
     brand: string;
     serial: string;
     description: string;
-    listComment: Comment;
+    listComment: Comment[];
     listPhoto: Photo[];
     listCase: Case [];
     listTag: Tag[];

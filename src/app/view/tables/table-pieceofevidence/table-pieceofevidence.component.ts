@@ -8,7 +8,7 @@ import { PieceOfEvidence } from '../../../model/pieceOfEvidence';
   styleUrls: ['./table-pieceofevidence.component.css']
 })
 export class TablePieceofevidenceComponent implements OnInit {
-  pieceOfEvidenceColumns = ['name', 'comment'];
+  pieceOfEvidenceColumns = ['date', 'name', 'description'];
   pieceOfEvidenceSource = generatedListPieceOfEvidence;
 
 
@@ -18,8 +18,12 @@ export class TablePieceofevidenceComponent implements OnInit {
   }
 
 }
-const generatedListePieceOfEvidence: PieceOfEvidence = [
-  {id: 1, name: 'drap ensanglanté', listPhoto: [], comment: ''}
-]
 
-]
+// USER TESTING
+const generatedListPieceOfEvidence: PieceOfEvidence[] = [
+  {id: 1, date: '21/05/2015', name: 'drap ensanglanté', description: 'trouvé sur le lit',
+   listComment: [], listPhoto: [], listCase: [], listTag: []},
+   {id: 1, date: '21/05/2015', name: 'drap ensanglanté', description: 'trouvé sur le lit',
+   listComment: [], listPhoto: [], listCase: [], listTag: []},
+];
+

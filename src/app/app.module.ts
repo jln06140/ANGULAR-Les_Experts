@@ -17,6 +17,7 @@ import { TablePieceofevidenceComponent } from './view/tables/table-pieceofeviden
 import { TableWitnessComponent } from './view/tables/table-witness/table-witness.component';
 import { TableVictimComponent } from './view/tables/table-victim/table-victim.component';
 import { TableSuspectComponent } from './view/tables/table-suspect/table-suspect.component';
+import { PageAffaireComponent } from './view/pages/page-affaire/page-affaire.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { TableSuspectComponent } from './view/tables/table-suspect/table-suspect
     TablePieceofevidenceComponent,
     TableWitnessComponent,
     TableVictimComponent,
-    TableSuspectComponent
+    TableSuspectComponent,
+    PageAffaireComponent
   ],
   imports: [
     BrowserModule,

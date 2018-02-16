@@ -8,7 +8,7 @@ export interface PieceOfEvidence {
     date: string;
     name: string;
     description: string;
-    listComment: Comment;
+    listComment: Comment[];
     listPhoto: Photo[];
     listCase: Case [];
     listTag: Tag[];
