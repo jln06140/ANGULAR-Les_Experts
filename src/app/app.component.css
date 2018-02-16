@@ -2,6 +2,10 @@ mat-sidenav {
     width: 200px;
 }
 
+mat-sidenav-container {
+    height: 87vh;
+}
+
 .logo {
     font-family: 'Ultra', serif;
     font-size: 60px;

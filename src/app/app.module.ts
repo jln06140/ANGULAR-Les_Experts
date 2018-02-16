@@ -18,6 +18,8 @@ import { TableWitnessComponent } from './view/tables/table-witness/table-witness
 import { TableVictimComponent } from './view/tables/table-victim/table-victim.component';
 import { TableSuspectComponent } from './view/tables/table-suspect/table-suspect.component';
 import { PageAffaireComponent } from './view/pages/page-affaire/page-affaire.component';
+import { ExploreTablesComponent } from './view/pages/page-affaire/explore-tables/explore-tables.component';
+import { MessageAffaireComponent } from './view/pages/page-affaire/message-affaire/message-affaire.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { PageAffaireComponent } from './view/pages/page-affaire/page-affaire.com
     TableWitnessComponent,
     TableVictimComponent,
     TableSuspectComponent,
-    PageAffaireComponent
+    PageAffaireComponent,
+    ExploreTablesComponent,
+    MessageAffaireComponent
   ],
   imports: [
     BrowserModule,
