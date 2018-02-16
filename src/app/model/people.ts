@@ -5,6 +5,7 @@ import { Tag } from './tag';
 // users not included
 export interface People {
     id: number;
+    date: string;
     firstName: string;
     lastName: string;
     nickName: string;
@@ -23,7 +24,4 @@ export interface People {
     listCase: Case [];
     listTag: Tag[];
     listPeopleLink: People[];
-
-
-
 }

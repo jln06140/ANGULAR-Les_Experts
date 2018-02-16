@@ -8,8 +8,8 @@ import { Case } from '../../../model/case';
   styleUrls: ['./table-case.component.css']
 })
 export class TableCaseComponent implements OnInit {
-  displayedColumns = ['date', 'name', 'comment'];
-  dataSource = generatedListCase;
+  caseColumns = ['date', 'name', 'comment'];
+  caseSource = generatedListCase;
 
 
   constructor() { }
