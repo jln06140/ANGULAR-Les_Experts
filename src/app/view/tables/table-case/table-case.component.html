@@ -1,5 +1,9 @@
 <mat-table [dataSource]="caseSource">
 <!-- Définition des lignes -->
+<ng-container matColumDef="id">
+  <mat-header-cell *matHeaderCellDef>Identifiant</mat-header-cell>
+  <mat-cell *matCellDef="let row">{{row.id}}</mat-cell>
+</ng-container>
 <ng-container matColumnDef="date">
   <mat-header-cell *matHeaderCellDef fxHide.xs>Date de création</mat-header-cell>
   <mat-cell *matCellDef="let row" fxHide.xs>{{row.date}}</mat-cell>

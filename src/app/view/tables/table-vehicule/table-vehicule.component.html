@@ -1,3 +1,32 @@
-<p>
-  table-vehicule works!
-</p>
+<mat-table [dataSource]="vehiculeSource">
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>Identifiant</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.id}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="date">
+    <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.date}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>Nom</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.name}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="brand">
+    <mat-header-cell *matHeaderCellDef>Marque</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.brand}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="color">
+    <mat-header-cell *matHeaderCellDef>Couleur</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.color}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="licensePlate">
+    <mat-header-cell *matHeaderCellDef>Immatriculation</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.licensePlate}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.description}}</mat-cell>
+    </ng-container>
+  <mat-header-row *matHeaderRowDef="vehiculeColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: vehiculeColumns"></mat-row>
+</mat-table>

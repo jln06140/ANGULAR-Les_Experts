@@ -1,15 +1,19 @@
 <mat-table [dataSource]="pieceOfEvidenceSource">
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>Idenftifiant</mat-header-cell>
+    <mat-cell *matCellDef="let row"></mat-cell> 
+  </ng-container>
   <ng-container matColumnDef="date">
     <mat-header-cell *matHeaderCellDef fxHide.xs>Date</mat-header-cell>
-    <mat-cell *matCellDef="let piece" fxHide.xs>{{piece.date}}</mat-cell>
+    <mat-cell *matCellDef="let row" fxHide.xs>{{row.date}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef>Nom</mat-header-cell>
-    <mat-cell *matCellDef="let piece">{{piece.name}}</mat-cell>
+    <mat-cell *matCellDef="let row">{{row.name}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="description">
     <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
-    <mat-cell *matCellDef="let piece">{{piece.description}}</mat-cell>
+    <mat-cell *matCellDef="let row">{{row.description}}</mat-cell>
   </ng-container>
   <mat-header-row *matHeaderRowDef="pieceOfEvidenceColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: pieceOfEvidenceColumns"></mat-row>
