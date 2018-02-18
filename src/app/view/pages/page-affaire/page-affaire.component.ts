@@ -8,10 +8,14 @@ import { AffaireService } from '../../../controller/affaire.service';
 })
 export class PageAffaireComponent implements OnInit {
   affaire = this.affaireService.selectedAffaire;
+  editModeDescription: boolean = false;
 
   constructor(public affaireService: AffaireService) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  editDescription() {
+    this.editModeDescription = !this.editModeDescription;
   }
 
 }

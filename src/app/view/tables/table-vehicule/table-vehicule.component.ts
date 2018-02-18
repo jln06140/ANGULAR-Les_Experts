@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Vehicule } from '../../../model/vehicule';
+import { AffaireService } from '../../../controller/affaire.service';
+import { PopupService } from '../../../controller/popup.service';
 
 @Component({
   selector: 'app-table-vehicule',
@@ -7,20 +9,14 @@ import { Vehicule } from '../../../model/vehicule';
   styleUrls: ['./table-vehicule.component.css']
 })
 export class TableVehiculeComponent implements OnInit {
-  vehiculeColumns = ['date', 'name', 'brand', 'color', 'licensePlate', 'description'];
-  vehiculeSource = generatedListVehicule;
-  constructor() { }
+  vehiculeColumns = ['date', 'name', 'brand', 'color', 'licensePlate', 'description', 'button'];
+  vehiculeSource = this.affaireService.selectedAffaire.listVehicule;
+  constructor(public affaireService: AffaireService, public popupService: PopupService) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  openDialog(row) {
+    this.popupService.openDialog(row);
   }
 
 }
-
-const generatedListVehicule: Vehicule[] = [
-  {id: 1, date: '02/05/2016', name: 'XS200', brand: 'Peugeot', color: 'bleu',
-  licensePlate: '20-AZS-15', description: 'voiture volée', listComment: [],
-  listPhoto: [], listCase: [], listTag: []},
-  {id: 2, date: '02/05/2010', name: '304', brand: 'Peugeot', color: 'bleu',
-  licensePlate: '20-AZS-15', description: 'voiture volée', listComment: [],
-  listPhoto: [], listCase: [], listTag: []},
-];

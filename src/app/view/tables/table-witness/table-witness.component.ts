@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AffaireService } from '../../../controller/affaire.service';
 
 @Component({
   selector: 'app-table-witness',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table-witness.component.css']
 })
 export class TableWitnessComponent implements OnInit {
-
-  constructor() { }
+  witnessColumns = ['firstName', 'lastName', 'size', 'weight', 'button'];
+  witnessSource = this.affaireService.selectedAffaire.listWitness;
+  constructor(public affaireService: AffaireService) { }
 
   ngOnInit() {
   }

@@ -21,6 +21,10 @@ import { PageAffaireComponent } from './view/pages/page-affaire/page-affaire.com
 import { ExploreTablesComponent } from './view/pages/page-affaire/explore-tables/explore-tables.component';
 import { MessageAffaireComponent } from './view/pages/page-affaire/message-affaire/message-affaire.component';
 import { AffaireService } from './controller/affaire.service';
+import { PopupVehiculeComponent } from './view/popup/popup-vehicule/popup-vehicule.component';
+import { PopupWeaponComponent } from './view/popup/popup-weapon/popup-weapon.component';
+import { PopupPieceofevidenceComponent } from './view/popup/popup-pieceofevidence/popup-pieceofevidence.component';
+import { PopupService } from './controller/popup.service';
 
 
 
@@ -41,7 +45,10 @@ import { AffaireService } from './controller/affaire.service';
     TableSuspectComponent,
     PageAffaireComponent,
     ExploreTablesComponent,
-    MessageAffaireComponent
+    MessageAffaireComponent,
+    PopupVehiculeComponent,
+    PopupWeaponComponent,
+    PopupPieceofevidenceComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +58,8 @@ import { AffaireService } from './controller/affaire.service';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [AffaireService],
+  entryComponents: [PopupVehiculeComponent],
+  providers: [AffaireService, PopupService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

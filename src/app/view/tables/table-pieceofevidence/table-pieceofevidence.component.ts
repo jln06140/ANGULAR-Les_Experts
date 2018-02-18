@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PieceOfEvidence } from '../../../model/pieceOfEvidence';
+import { AffaireService } from '../../../controller/affaire.service';
 
 
 @Component({
@@ -8,11 +9,11 @@ import { PieceOfEvidence } from '../../../model/pieceOfEvidence';
   styleUrls: ['./table-pieceofevidence.component.css']
 })
 export class TablePieceofevidenceComponent implements OnInit {
-  pieceOfEvidenceColumns = ['date', 'name', 'description'];
-  pieceOfEvidenceSource = generatedListPieceOfEvidence;
+  pieceOfEvidenceColumns = ['date', 'name', 'description', 'button'];
+  pieceOfEvidenceSource = this.affaireService.selectedAffaire.listPoE;
 
 
-  constructor() { }
+  constructor(public affaireService: AffaireService) { }
 
   ngOnInit() {
   }

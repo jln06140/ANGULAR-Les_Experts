@@ -2,6 +2,7 @@ import { Photo } from './photo';
 import { Case } from './case';
 import { Tag } from './tag';
 
+
 // users not included
 export interface People {
     id: number;
@@ -12,7 +13,7 @@ export interface People {
     adress: string;
     photo: Photo;
     adn: string;
-    footprint: Photo;
+    fingerPrint: Photo;
     tatoo: string;
     skinColor: string;
     eyeColor: string;
@@ -20,7 +21,8 @@ export interface People {
     hairStyle: string;
     size: number;
     weight: number;
-    comment: string;
+    description: string;
+    listComment: Comment;
     listCase: Case [];
     listTag: Tag[];
     listPeopleLink: People[];

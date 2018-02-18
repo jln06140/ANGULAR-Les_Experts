@@ -12,8 +12,12 @@
     <mat-cell *matCellDef="let row">{{row.name}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="description">
-    <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
-    <mat-cell *matCellDef="let row">{{row.description}}</mat-cell>
+    <mat-header-cell *matHeaderCellDef fxHide.xs>Description</mat-header-cell>
+    <mat-cell *matCellDef="let row" fxHide.xs>{{row.description}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="button">
+    <mat-header-cell *matHeaderCellDef><button mat-raised-button color="warn">Nouveau</button></mat-header-cell>
+    <mat-cell *matCellDef="let row"><button mat-raised-button color="accent">Accéder</button></mat-cell>
   </ng-container>
   <mat-header-row *matHeaderRowDef="pieceOfEvidenceColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: pieceOfEvidenceColumns"></mat-row>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AffaireService } from '../../../controller/affaire.service';
 
 @Component({
   selector: 'app-table-victim',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table-victim.component.css']
 })
 export class TableVictimComponent implements OnInit {
-
-  constructor() { }
+  victimColumns = ['firstName', 'lastName', 'size', 'weight', 'button'];
+  victimSource = this.affaireService.selectedAffaire.listVictim;
+  constructor(public affaireService: AffaireService) { }
 
   ngOnInit() {
   }
