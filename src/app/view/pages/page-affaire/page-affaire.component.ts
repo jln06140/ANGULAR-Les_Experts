@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AffaireService } from '../../../controller/affaire.service';
 
 @Component({
   selector: 'app-page-affaire',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-affaire.component.css']
 })
 export class PageAffaireComponent implements OnInit {
+  affaire = this.affaireService.selectedAffaire;
 
-  constructor() { }
+  constructor(public affaireService: AffaireService) { }
 
   ngOnInit() {
   }

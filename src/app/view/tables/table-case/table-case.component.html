@@ -12,10 +12,14 @@
     <mat-header-cell *matHeaderCellDef>Nom</mat-header-cell>
     <mat-cell *matCellDef="let row">{{row.name}}</mat-cell>
   </ng-container>
-  <ng-container matColumnDef="comment">
+  <ng-container matColumnDef="description">
       <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
-      <mat-cell *matCellDef="let row">{{row.comment}}</mat-cell>
+      <mat-cell *matCellDef="let row">{{row.description}}</mat-cell>
     </ng-container>
+  <ng-container matColumnDef="button">
+      <mat-header-cell *matHeaderCellDef></mat-header-cell>
+      <mat-cell *matCellDef="let row"><button mat-raised-button color="accent" routerLink="/affaire" (click)="selectAffaire(row)">Accéder</button></mat-cell>
+  </ng-container>
 <!-- Définition des colonnes -->
   <mat-header-row *matHeaderRowDef="caseColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: caseColumns"></mat-row>

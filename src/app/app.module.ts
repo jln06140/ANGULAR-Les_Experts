@@ -20,6 +20,10 @@ import { TableSuspectComponent } from './view/tables/table-suspect/table-suspect
 import { PageAffaireComponent } from './view/pages/page-affaire/page-affaire.component';
 import { ExploreTablesComponent } from './view/pages/page-affaire/explore-tables/explore-tables.component';
 import { MessageAffaireComponent } from './view/pages/page-affaire/message-affaire/message-affaire.component';
+import { AffaireService } from './controller/affaire.service';
+
+
+
 
 
 @NgModule({
@@ -47,7 +51,7 @@ import { MessageAffaireComponent } from './view/pages/page-affaire/message-affai
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AffaireService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

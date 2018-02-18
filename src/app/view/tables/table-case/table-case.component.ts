@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Case } from '../../../model/case';
+import { AffaireService } from '../../../controller/affaire.service';
 
 
 @Component({
@@ -8,15 +9,19 @@ import { Case } from '../../../model/case';
   styleUrls: ['./table-case.component.css']
 })
 export class TableCaseComponent implements OnInit {
-  caseColumns = ['date', 'name', 'comment'];
-  caseSource = generatedListCase;
+  caseColumns = ['date', 'name', 'description', 'button'];
+  caseSource = this.affaireService.simulatedData;
 
 
-  constructor() { }
+
+  constructor(public affaireService: AffaireService) { }
 
   ngOnInit() {
   }
 
+  selectAffaire(row) {
+    this.affaireService.selectAffaire(row);
+  }
 }
 
 // USER TESTING
