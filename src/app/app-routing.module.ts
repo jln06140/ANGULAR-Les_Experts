@@ -4,6 +4,7 @@ import { LoginComponent } from './view/login/login.component';
 import { PageDashboardComponent } from './view/pages/page-dashboard/page-dashboard.component';
 import { PageAffaireComponent } from './view/pages/page-affaire/page-affaire.component';
 
+// router table
 const routes: Routes = [
  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
  {path: 'login', component: LoginComponent},

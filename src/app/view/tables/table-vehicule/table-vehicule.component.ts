@@ -15,6 +15,7 @@ export class TableVehiculeComponent implements OnInit {
 
   ngOnInit() {}
 
+// ouverture du popup avec le contenu de la ligne en paramètre
   openDialog(row) {
     this.popupService.openDialog(row);
   }

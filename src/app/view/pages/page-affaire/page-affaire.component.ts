@@ -14,6 +14,7 @@ export class PageAffaireComponent implements OnInit {
 
   ngOnInit() {}
 
+// switch edition/affichage de la description
   editDescription() {
     this.editModeDescription = !this.editModeDescription;
   }

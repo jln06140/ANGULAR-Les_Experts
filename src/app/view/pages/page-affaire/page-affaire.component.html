@@ -6,9 +6,11 @@
             <mat-icon>mode_edit</mat-icon>
           </button>
     </h4>
+<!-- description de l'affaire -->
     <mat-card *ngIf="!editModeDescription">
       <p>{{affaire.description}}</p>
     </mat-card> 
+<!-- édition de la description de l'affaire -->
     <form *ngIf="editModeDescription">
         <mat-form-field>
           <textarea matInput value={{affaire.description}}></textarea>

@@ -10,6 +10,7 @@ import { Vehicule } from '../../../model/vehicule';
 })
 export class PopupVehiculeComponent implements OnInit {
 
+// injection du contenu de la ligne sélectionnée(data)
   constructor(public dialogRef: MatDialogRef<PopupVehiculeComponent>,
     @Inject(MAT_DIALOG_DATA) public data) { }
 

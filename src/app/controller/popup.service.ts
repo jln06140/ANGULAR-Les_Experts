@@ -9,6 +9,7 @@ export class PopupService {
 
   constructor(public dialog: MatDialog) { }
 
+// ouverture du popup (dialog) avec le contenu de la ligne en paramètre
   openDialog(dataSource): void {
     let dialogRef = this.dialog.open(PopupVehiculeComponent, {
       width: '500px',

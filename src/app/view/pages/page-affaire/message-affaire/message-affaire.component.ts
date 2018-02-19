@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessageAffaireComponent implements OnInit {
   messageAffaireColumns = ['date', 'description', 'name'];
+// USER TESTING 
   messageAffaireSource = generatedListMessageAffaire;
 
   constructor() { }
@@ -23,6 +24,7 @@ export interface Message {
   name: string;
 }
 
+// USER TESTING
 const generatedListMessageAffaire: Message[] = [
   {date: '21/05/1983', description : 'message 1', name: 'Gérôme'},
   {date: '21/05/1983', description : 'message 2', name: 'Toto'},
