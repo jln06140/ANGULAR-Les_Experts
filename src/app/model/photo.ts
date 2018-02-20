@@ -3,7 +3,7 @@ import { Tag } from './tag';
 import { Comment } from './comment';
 
 export interface Photo {
-    id: number;
+    id?: number;
     date: string;
     name: string;
     description: string;

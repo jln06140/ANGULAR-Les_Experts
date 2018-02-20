@@ -5,7 +5,7 @@ import { Tag } from './tag';
 
 // users not included
 export interface People {
-    id: number;
+    id?: number;
     date: string;
     firstName: string;
     lastName: string;

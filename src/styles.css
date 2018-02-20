@@ -3,7 +3,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #0b2e66;
+    background-color: #0069c0;
+    margin: 0px;
 }
 
 .mat-card {
@@ -14,4 +15,9 @@ body {
     font-family: 'Ultra', serif;
     font-size: 60px;
 }
+
+button {
+    color: #ff6d00;
+}
+
 

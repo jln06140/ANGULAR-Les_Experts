@@ -29,7 +29,7 @@
     </ng-container>
 <!-- colonne générée pour afficher les boutons nouveau/accéder -->
     <ng-container matColumnDef="button">
-      <mat-header-cell *matHeaderCellDef><button mat-raised-button color="warn">Nouveau</button></mat-header-cell>
+      <mat-header-cell *matHeaderCellDef></mat-header-cell>
       <mat-cell *matCellDef="let row"><button mat-raised-button color="accent" (click)="openDialog(row)">Accéder</button></mat-cell>
     </ng-container>
   <mat-header-row *matHeaderRowDef="vehiculeColumns"></mat-header-row>

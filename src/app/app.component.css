@@ -10,4 +10,9 @@ mat-sidenav-container {
     font-family: 'Ultra', serif;
     font-size: 60px;
     text-align: center;
+    color: white;
+}
+
+mat-toolbar {
+    background-color: #2196f3;
 }

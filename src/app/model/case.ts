@@ -8,7 +8,7 @@ import { Tag } from './tag';
 import { Comment } from './comment';
 
 export interface Case {
-    id: number;
+    id?: number;
     date: string;
     name: string;
     description: string;

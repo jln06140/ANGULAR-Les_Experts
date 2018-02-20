@@ -44,7 +44,7 @@ export class AffaireService {
       listVehicule: [
         {id: 1,
           date: '04/08/2014',
-          name: 'XS300',
+          name: '308',
           brand: 'Peugeot',
           color: 'bleu',
           licensePlate: 'XS-762-LI',
@@ -55,8 +55,8 @@ export class AffaireService {
           listTag: [], },
           {id: 1,
             date: '04/08/2014',
-            name: 'XS300',
-            brand: 'Peugeot',
+            name: 'Twingo',
+            brand: 'Renault',
             color: 'bleu',
             licensePlate: 'XS-762-LI',
             description: 'voiture brûlée',
@@ -88,22 +88,7 @@ export class AffaireService {
                 listTag: [], },
       ],
       listTag: [],
-      },
-      {id: 2,
-        date: '21/05/2017',
-        name: 'Kennedy',
-        description: 'crash d\'un ballon sonde',
-        listComment: [],
-        listUser: [],
-        listPhoto: [],
-        listPoE: [],
-        listVictim: [],
-        listSuspect: [],
-        listWitness: [],
-        listWeapon: [],
-        listVehicule: [],
-        listTag: [],
-        },
+      }
   ];
 
   constructor() { }
@@ -113,18 +98,3 @@ export class AffaireService {
   }
 
 }
-
-/*
-{id: 1,
-  date: '21/05/1983',
- text : 'message 1',
-  user: ['Gérôme', 'Grignon', 'ggrignon', 'password',
-        [1, '', '', '', [], '', [], []],
-},
-{id: 1,
-  date: '21/05/1983',
- text : 'message 1',
-  user: ['Gérôme', 'Grignon', 'ggrignon', 'password',
-        [1, '', '', '', [], '', [], []],
-},
-*/

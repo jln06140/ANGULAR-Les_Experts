@@ -4,7 +4,7 @@ import { Tag } from './tag';
 import { Comment } from './comment';
 
 export interface Vehicule {
-    id: number;
+    id?: number;
     date: string;
     name: string;
     brand: string;
