@@ -1,21 +1,11 @@
 <section fxLayout="row" fxLayout.xs="column">
   <mat-card fxFlex="40">
     <h2>Affaire {{affaire.name}}</h2>
-    <h4>Description
-        <button mat-mini-fab (click)="editDescription()">
-            <mat-icon>mode_edit</mat-icon>
-          </button>
-    </h4>
+    <h4>Description</h4>
 <!-- description de l'affaire -->
-    <mat-card *ngIf="!editModeDescription">
+    <mat-card>
       <p>{{affaire.description}}</p>
     </mat-card> 
-<!-- édition de la description de l'affaire -->
-    <form *ngIf="editModeDescription">
-        <mat-form-field>
-          <textarea matInput value={{affaire.description}}></textarea>
-        </mat-form-field>
-    </form>
   </mat-card>
 <mat-card fxFlex="60">
   <h4>Historique [Fonctionnalité à venir]</h4>

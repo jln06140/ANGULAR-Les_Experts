@@ -20,6 +20,6 @@ export interface Case {
     listSuspect: People[];
     listWitness: People[];
     listWeapon: Weapon[];
-    listVehicule: Vehicule[];
+    vehicule: Vehicule[];
     listTag: Tag[];
 }

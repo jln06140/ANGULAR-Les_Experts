@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Case } from '../../../model/case';
 import { AffaireService } from '../../../controller/affaire.service';
+import { CaseService } from '../../../controller/case.service';
+import {MatTableDataSource, MatPaginator} from '@angular/material';
 
 
 @Component({
@@ -10,13 +12,22 @@ import { AffaireService } from '../../../controller/affaire.service';
 })
 export class TableCaseComponent implements OnInit {
   caseColumns = ['date', 'name', 'description', 'button'];
-  caseSource = this.affaireService.simulatedData;
+  caseSource;
+  errText: string;
 
-
-
-  constructor(public affaireService: AffaireService) { }
+  constructor(public affaireService: AffaireService, private caseService: CaseService) { }
 
   ngOnInit() {
+    this.caseService.getCases().subscribe(
+      cases => this.caseSource = new MatTableDataSource(cases),
+      err => this.errText = 'La requête a échouée'
+    );
+  }
+
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+    this.caseSource.filter = filterValue;
   }
 
   selectAffaire(row) {
@@ -24,13 +35,4 @@ export class TableCaseComponent implements OnInit {
   }
 }
 
-// USER TESTING
-const generatedListCase: Case[] = [
-  {id: 1, date: '03/02/2018', name: 'Roswell', description: 'Désastre à la zone 51', listComment: [], listUser: [],
-  listPhoto: [], listPoE: [], listVictim: [], listSuspect: [], listWitness: [], listWeapon: [],
-  listVehicule: [], listTag: []},
-  {id: 1, date: '03/02/2018', name: 'Roswell', description: 'Désastre à la zone 51', listComment: [], listUser: [],
-  listPhoto: [], listPoE: [], listVictim: [], listSuspect: [], listWitness: [], listWeapon: [],
-  listVehicule: [], listTag: []},
-];
 

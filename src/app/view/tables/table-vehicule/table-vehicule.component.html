@@ -20,17 +20,12 @@
     <mat-cell *matCellDef="let row" fxHide.xs>{{row.color}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="licensePlate">
-    <mat-header-cell *matHeaderCellDef fxHide.xs>Immatriculation</mat-header-cell>
-    <mat-cell *matCellDef="let row" fxHide.xs>{{row.licensePlate}}</mat-cell>
+    <mat-header-cell *matHeaderCellDef>Immatriculation</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.licensePlate}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="description">
       <mat-header-cell *matHeaderCellDef fxHide.xs>Description</mat-header-cell>
       <mat-cell *matCellDef="let row" fxHide.xs>{{row.description}}</mat-cell>
-    </ng-container>
-<!-- colonne générée pour afficher les boutons nouveau/accéder -->
-    <ng-container matColumnDef="button">
-      <mat-header-cell *matHeaderCellDef></mat-header-cell>
-      <mat-cell *matCellDef="let row"><button mat-raised-button color="accent" (click)="openDialog(row)">Accéder</button></mat-cell>
     </ng-container>
   <mat-header-row *matHeaderRowDef="vehiculeColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: vehiculeColumns"></mat-row>

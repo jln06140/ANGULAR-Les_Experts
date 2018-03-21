@@ -1,3 +1,7 @@
+<section>
+    <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
 <mat-table [dataSource]="caseSource">
 <!-- Définition des lignes -->
 <ng-container matColumDef="id">
@@ -18,11 +22,12 @@
     </ng-container>
   <ng-container matColumnDef="button">
       <mat-header-cell *matHeaderCellDef></mat-header-cell>
-      <mat-cell *matCellDef="let row"><button mat-raised-button style="background-color: #ff6d00" routerLink="/affaire" (click)="selectAffaire(row)">Accéder</button></mat-cell>
+      <mat-cell *matCellDef="let row"><button mat-raised-button color="accent" routerLink="/affaire" (click)="selectAffaire(row)">Accéder</button></mat-cell>
   </ng-container>
 <!-- Définition des colonnes -->
   <mat-header-row *matHeaderRowDef="caseColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: caseColumns"></mat-row>
 </mat-table>
+</section>
 
 

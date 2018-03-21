@@ -5,9 +5,10 @@ import { Comment } from './comment';
 
 export interface Vehicule {
     id?: number;
-    date: string;
-    name: string;
-    brand: string;
+    createDate: string;
+    updateDate: string;
+    model: string;
+    marque: string;
     color: string;
     licensePlate: string;
     description: string;

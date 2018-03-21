@@ -8,10 +8,8 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { NavigationComponent } from './view/navigation/navigation.component';
 import { LoginComponent } from './view/login/login.component';
 import { TableCaseComponent } from './view/tables/table-case/table-case.component';
-import { PageDashboardComponent } from './view/pages/page-dashboard/page-dashboard.component';
 import { TableWeaponComponent } from './view/tables/table-weapon/table-weapon.component';
 import { TableVehiculeComponent } from './view/tables/table-vehicule/table-vehicule.component';
 import { TablePieceofevidenceComponent } from './view/tables/table-pieceofevidence/table-pieceofevidence.component';
@@ -26,6 +24,28 @@ import { PopupVehiculeComponent } from './view/popup/popup-vehicule/popup-vehicu
 import { PopupWeaponComponent } from './view/popup/popup-weapon/popup-weapon.component';
 import { PopupPieceofevidenceComponent } from './view/popup/popup-pieceofevidence/popup-pieceofevidence.component';
 import { PopupService } from './controller/popup.service';
+import { CaseService } from './controller/case.service';
+import { HttpClientModule } from '@angular/common/http';
+import { PoeService } from './controller/poe.service';
+import { SuspectService } from './controller/suspect.service';
+import { VehiculeService } from './controller/vehicule.service';
+import { VictimService } from './controller/victim.service';
+import { WeaponService } from './controller/weapon.service';
+import { WitnessService } from './controller/witness.service';
+import { CreateAffaireComponent } from './view/pages/create-affaire/create-affaire.component';
+import { EditAffaireComponent } from './view/pages/edit-affaire/edit-affaire.component';
+import { EditVehiculeComponent } from './view/pages/edit-vehicule/edit-vehicule.component';
+import { VehiculeComponent } from './view/vehicule/vehicule.component';
+import { DetailVehiculeComponent } from './view/vehicule/detail-vehicule/detail-vehicule.component';
+import { TableVehiculesComponent } from './view/vehicule/table-vehicules/table-vehicules.component';
+import { DashboardComponent } from './view/dashboard/dashboard.component';
+import { CelluleComponent } from './view/cellule/cellule.component';
+import { DetailCelluleComponent } from './view/cellule/detail-cellule/detail-cellule.component';
+import { TableCelluleComponent } from './view/cellule/table-cellule/table-cellule.component';
+import { CreateCelluleComponent } from './view/cellule/create-cellule/create-cellule.component';
+import { CelluleService } from './controller/cellule.service';
+import { CreateVehiculeComponent } from './view/vehicule/create-vehicule/create-vehicule.component';
+
 
 
 
@@ -34,10 +54,8 @@ import { PopupService } from './controller/popup.service';
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
     LoginComponent,
     TableCaseComponent,
-    PageDashboardComponent,
     TableWeaponComponent,
     TableVehiculeComponent,
     TablePieceofevidenceComponent,
@@ -49,7 +67,19 @@ import { PopupService } from './controller/popup.service';
     MessageAffaireComponent,
     PopupVehiculeComponent,
     PopupWeaponComponent,
-    PopupPieceofevidenceComponent
+    PopupPieceofevidenceComponent,
+    CreateAffaireComponent,
+    CreateVehiculeComponent,
+    EditAffaireComponent,
+    EditVehiculeComponent,
+    VehiculeComponent,
+    DetailVehiculeComponent,
+    TableVehiculesComponent,
+    DashboardComponent,
+    CelluleComponent,
+    DetailCelluleComponent,
+    TableCelluleComponent,
+    CreateCelluleComponent
   ],
   imports: [
     BrowserModule,
@@ -57,10 +87,12 @@ import { PopupService } from './controller/popup.service';
     FlexLayoutModule,
     MaterialModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   entryComponents: [PopupVehiculeComponent],
-  providers: [AffaireService, PopupService],
+  providers: [AffaireService, PopupService, CaseService, PoeService, SuspectService,
+     VehiculeService, VictimService, WeaponService, WitnessService, CelluleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
