@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CreateVehiculeComponent } from './create-vehicule.component';
+import { PopupDeleteLinkComponent } from './popup-delete-link.component';
 
-describe('CreateVehiculeComponent', () => {
-  let component: CreateVehiculeComponent;
-  let fixture: ComponentFixture<CreateVehiculeComponent>;
+describe('PopupDeleteLinkComponent', () => {
+  let component: PopupDeleteLinkComponent;
+  let fixture: ComponentFixture<PopupDeleteLinkComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreateVehiculeComponent ]
+      declarations: [ PopupDeleteLinkComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CreateVehiculeComponent);
+    fixture = TestBed.createComponent(PopupDeleteLinkComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

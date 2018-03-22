@@ -3,29 +3,21 @@
     <mat-header-cell *matHeaderCellDef fxHide.xs>Identifiant</mat-header-cell>
     <mat-cell *matCellDef="let row" fxHide.xs>{{row.id}}</mat-cell>
   </ng-container>
-  <ng-container matColumnDef="date">
-    <mat-header-cell *matHeaderCellDef fxHide.xs>Date d'intégration</mat-header-cell>
-    <mat-cell *matCellDef="let row" fxHide.xs>{{row.date}}</mat-cell>
+  <ng-container matColumnDef="type">
+    <mat-header-cell *matHeaderCellDef fxHide.xs>Type</mat-header-cell>
+    <mat-cell *matCellDef="let row" fxHide.xs>{{row.type}}</mat-cell>
   </ng-container>
-  <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
-    <mat-cell *matCellDef="let row">{{row.name}}</mat-cell>
+  <ng-container matColumnDef="modele">
+    <mat-header-cell *matHeaderCellDef>Modèle</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.modele}}</mat-cell>
   </ng-container>
-  <ng-container matColumnDef="brand">
-    <mat-header-cell *matHeaderCellDef fxHide.xs>Marque</mat-header-cell>
-    <mat-cell *matCellDef="let row" fxHide.xs>{{row.brand}}</mat-cell>
+  <ng-container matColumnDef="createDate">
+    <mat-header-cell *matHeaderCellDef fxHide.xs>Date de création</mat-header-cell>
+    <mat-cell *matCellDef="let row" fxHide.xs>{{row.createDate}}</mat-cell>
   </ng-container>
-  <ng-container matColumnDef="serial">
-    <mat-header-cell *matHeaderCellDef fxHide.xs>N° de série</mat-header-cell>
-    <mat-cell *matCellDef="let row" fxHide.xs>{{row.serial}}</mat-cell>
-  </ng-container>
-  <ng-container matColumnDef="description">
-    <mat-header-cell *matHeaderCellDef fxHide.xs>Description</mat-header-cell>
-    <mat-cell *matCellDef="let row" fxHide.xs>{{row.description}}</mat-cell>
-  </ng-container>
-  <ng-container matColumnDef="button">
-    <mat-header-cell *matHeaderCellDef></mat-header-cell>
-    <mat-cell *matCellDef="let row"><button mat-raised-button color="accent">Accéder</button></mat-cell>
+  <ng-container matColumnDef="updateDate">
+    <mat-header-cell *matHeaderCellDef fxHide.xs>Dernière mise à jour</mat-header-cell>
+    <mat-cell *matCellDef="let row" fxHide.xs>{{row.updateDate}}</mat-cell>
   </ng-container>
   <mat-header-row *matHeaderRowDef="weaponColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: weaponColumns"></mat-row>

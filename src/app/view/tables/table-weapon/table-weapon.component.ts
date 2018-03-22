@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AffaireService } from '../../../controller/affaire.service';
+import { ActivatedRoute } from '@angular/router';
+import { CaseService } from '../../../controller/case.service';
+import { MatTableDataSource } from '@angular/material';
+
 
 @Component({
   selector: 'app-table-weapon',
@@ -7,12 +10,18 @@ import { AffaireService } from '../../../controller/affaire.service';
   styleUrls: ['./table-weapon.component.css']
 })
 export class TableWeaponComponent implements OnInit {
-  weaponColumns = ['date', 'name', 'serial', 'description', 'button'];
-  weaponSource = this.affaireService.selectedAffaire.listWeapon;
+  weaponColumns = ['type', 'modele', 'createDate', 'updateDate'];
+  weaponSource;
+  errText: string;
 
-  constructor(public affaireService: AffaireService) { }
+  constructor(private route: ActivatedRoute, private caseService: CaseService) { }
 
   ngOnInit() {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.caseService.getCase(id).subscribe(
+      data => this.weaponSource = new MatTableDataSource(data.weapon),
+      err => this.errText = 'La requête a échouée'
+    );
   }
 
 }

@@ -1,13 +1,14 @@
 <!-- header -->
+<div class="container">
 <mat-toolbar>
-    <mat-toolbar-row fxLayout="row">
-        <button mat-button><mat-icon (click)="sidenav.toggle()" fxFlex="20">menu</mat-icon></button>
-        <h1 class="logo" [ngStyle.xs]="{'font-size.px': 30}" fxFlex="80" routerLink="/dashboard">POLICE</h1>
+    <mat-toolbar-row>
+        <button mat-button><mat-icon (click)="sidenav.toggle()">menu</mat-icon></button>
+        <h1 class="logo" [ngStyle.xs]="{'font-size.px': 30}" routerLink="/dashboard" fxLayoutAlign="center">POLICE</h1>
     </mat-toolbar-row>   
 </mat-toolbar>
 
 <!-- barre de navigation -->
-<mat-sidenav-container>
+<mat-sidenav-container class="sidenav-container">
     <mat-sidenav #sidenav mode='over'>
 <!-- contenu du menu de navigation -->
 <!-- Identité utilisateur -->
@@ -27,3 +28,4 @@
         <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>
+</div>

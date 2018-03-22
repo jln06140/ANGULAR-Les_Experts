@@ -15,11 +15,11 @@ export interface Case {
     listComment: Comment[];
     listUser: User[];
     listPhoto: Photo[];
-    listPoE: PieceOfEvidence[];
+    pieceOfEvidence: PieceOfEvidence[];
     listVictim: People[];
     listSuspect: People[];
     listWitness: People[];
-    listWeapon: Weapon[];
+    weapon: Weapon[];
     vehicule: Vehicule[];
     listTag: Tag[];
 }
