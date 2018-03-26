@@ -7,8 +7,8 @@
       <div fxLayout='row' fxLayout.xs='column'>
         <!-- détails du véhicule -->
         <article fxFlex='40'>
-          <h1 [ngStyle.xs]='title'>VEHICULE</h1>
-          <h6 [ngStyle.xs]='title'>dernière mise à jour le {{vehicule?.updateDate | date: 'dd-MM-yyyy'}}</h6>
+          <h1>VEHICULE</h1>
+          <h6>dernière mise à jour le {{vehicule?.updateDate | date: 'dd-MM-yyyy'}}</h6>
           <p>Marque : {{vehicule?.marque}}</p>
           <p>Modèle : {{vehicule?.model}}</p>
           <p>Couleur : {{vehicule?.color}}</p>

@@ -18,6 +18,7 @@ import {
     MatPaginatorModule,
     MatProgressSpinnerModule
 } from '@angular/material';
+import { CdkTableModule } from '@angular/cdk/table';
 
 @NgModule({
     declarations: [
@@ -37,7 +38,8 @@ import {
         MatDialogModule,
         MatListModule,
         MatPaginatorModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        CdkTableModule
     ],
     exports: [
         MatCardModule,
@@ -54,7 +56,8 @@ import {
         MatDialogModule,
         MatListModule,
         MatPaginatorModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        CdkTableModule
     ],
   })
   export class MaterialModule { }

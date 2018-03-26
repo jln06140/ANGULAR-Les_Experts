@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MaterialModule } from './material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
@@ -43,6 +42,7 @@ import { CelluleService } from './controller/cellule.service';
 import { AffaireVehiculeComponent } from './view/vehicule/affaire-vehicule/affaire-vehicule.component';
 import { FormVehiculeComponent } from './view/vehicule/form-vehicule/form-vehicule.component';
 import { PopupDeleteLinkComponent } from './view/popup/popup-delete-link/popup-delete-link.component';
+import { MaterialModule } from './material.module';
 
 
 
@@ -89,7 +89,7 @@ import { PopupDeleteLinkComponent } from './view/popup/popup-delete-link/popup-d
   ],
   entryComponents: [PopupVehiculeComponent, PopupDeleteLinkComponent],
   providers: [PopupService, CaseService, PoeService, SuspectService,
-     VehiculeService, VictimService, WeaponService, WitnessService, CelluleService],
+     VehiculeService, VictimService, WeaponService, WitnessService, CelluleService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

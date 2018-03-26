@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessageAffaireComponent implements OnInit {
   messageAffaireColumns = ['date', 'description', 'name'];
-// USER TESTING 
+// USER TESTING
   messageAffaireSource = generatedListMessageAffaire;
 
   constructor() { }

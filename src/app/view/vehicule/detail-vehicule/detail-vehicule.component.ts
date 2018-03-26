@@ -30,7 +30,6 @@ export class DetailVehiculeComponent implements OnInit {
     this.vehiculeService.getVehicule(this.id).subscribe(
       data => this.vehicule = data,
       error => this.errText = 'la requête a échouée');
-      
   }
 
 

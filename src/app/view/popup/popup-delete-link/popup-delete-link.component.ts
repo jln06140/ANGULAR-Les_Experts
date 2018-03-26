@@ -21,7 +21,8 @@ export class PopupDeleteLinkComponent implements OnInit {
   private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.idCase = +this.route.paramMap.subscribe(params => this.idCase = +params.get('id'));
+    // this.idCase = +this.route.paramMap.subscribe(params => this.idCase = +params.get('id'));
+    // this.idCase = +this.route.snapshot
     console.log(this.idCase);
 
   }
