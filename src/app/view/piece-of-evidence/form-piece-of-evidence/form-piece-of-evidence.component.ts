@@ -37,7 +37,6 @@ export class FormPieceOfEvidenceComponent implements OnInit {
       serialNumber: '',
       createDate: null,
       updateDate: null,
-      // listCase:  [],
     };
     }
   }
@@ -53,7 +52,7 @@ export class FormPieceOfEvidenceComponent implements OnInit {
 
   onCreate() {
     if (!this.editing) {
-      this.router.navigate(['/pieceOfEvidence']);
+      this.router.navigate(['/pieceofevidence']);
     }
   }
 }

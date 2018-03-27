@@ -12,7 +12,7 @@
       <mat-cell *matCellDef="let row" fxHide.xs>{{row.id}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="date">
-      <mat-header-cell *matHeaderCellDef fxHide.xs>Date d'intégration</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef fxHide.xs >Date d'intégration</mat-header-cell>
       <mat-cell *matCellDef="let row" fxHide.xs>{{row.createDate | date: 'dd-MM-yyyy'}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="type">
@@ -40,4 +40,4 @@
 </section>
 
 <!-- router pour une nouvelle pièce a conviction -->
-<button mat-fab class="add" routerLink="/newpieceOfEvidence"><mat-icon>add</mat-icon></button>
+<button mat-fab class="add" routerLink="/newpieceofevidence"><mat-icon>add</mat-icon></button>
