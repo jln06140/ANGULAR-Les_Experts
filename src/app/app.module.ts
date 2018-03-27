@@ -43,6 +43,10 @@ import { AffaireVehiculeComponent } from './view/vehicule/affaire-vehicule/affai
 import { FormVehiculeComponent } from './view/vehicule/form-vehicule/form-vehicule.component';
 import { PopupDeleteLinkComponent } from './view/popup/popup-delete-link/popup-delete-link.component';
 import { MaterialModule } from './material.module';
+import { PieceOfEvidenceComponent } from './view/piece-of-evidence/piece-of-evidence.component';
+import { DetailPieceOfEvidenceComponent } from './view/piece-of-evidence/detail-piece-of-evidence/detail-piece-of-evidence.component';
+import { FormPieceOfEvidenceComponent } from './view/piece-of-evidence/form-piece-of-evidence/form-piece-of-evidence.component';
+import { TablePieceOfEvidenceComponent } from './view/piece-of-evidence/table-piece-of-evidence/table-piece-of-evidence.component';
 
 
 
@@ -76,7 +80,11 @@ import { MaterialModule } from './material.module';
     CreateCelluleComponent,
     AffaireVehiculeComponent,
     FormVehiculeComponent,
-    PopupDeleteLinkComponent
+    PopupDeleteLinkComponent,
+    PieceOfEvidenceComponent,
+    DetailPieceOfEvidenceComponent,
+    FormPieceOfEvidenceComponent,
+    TablePieceOfEvidenceComponent
   ],
   imports: [
     BrowserModule,

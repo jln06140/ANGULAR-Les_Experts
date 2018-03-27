@@ -9,9 +9,9 @@ export interface PieceOfEvidence {
     updateDate: Date;
     type: string;
     serialNumber: string;
-    description: string;
-    listComment: Comment[];
-    listPhoto: Photo[];
-    listCase: Case [];
-    listTag: Tag[];
+    // description: string;
+    // listComment: Comment[];
+    // listPhoto: Photo[];
+    // listCase: Case [];
+    // listTag: Tag[];
 }

@@ -2,9 +2,9 @@
 <div class="container">
 <mat-toolbar>
     <mat-toolbar-row>
-        <button mat-button><mat-icon (click)="sidenav.toggle()">menu</mat-icon></button>
+        <button mat-button id="navButton" (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
         <h1 class="logo" routerLink="/dashboard" fxLayoutAlign="center">POLICE</h1>
-    </mat-toolbar-row>   
+    </mat-toolbar-row>
 </mat-toolbar>
 
 <!-- barre de navigation -->
@@ -20,6 +20,7 @@
             <a mat-list-item routerLink="/dashboard" (click)="sidenav.close()">Tableau de bord</a>
             <a mat-list-item routerLink="/newcase" (click)="sidenav.close()">Créer Affaire</a>
             <a mat-list-item routerLink="/vehicules" (click)="sidenav.close()">Véhicules</a>
+            <a mat-list-item routerLink="/pieceOfEvidence" (click)="sidenav.close()">Pièces à conviction</a>
             <a mat-list-item routerLink='/cellules' (click)='sidenav.close()'>Cellules</a>
         </mat-nav-list>
     </mat-sidenav>

@@ -9,6 +9,9 @@ import { CelluleComponent } from './view/cellule/cellule.component';
 import { DetailCelluleComponent } from './view/cellule/detail-cellule/detail-cellule.component';
 import { CreateCelluleComponent } from './view/cellule/create-cellule/create-cellule.component';
 import { FormVehiculeComponent } from './view/vehicule/form-vehicule/form-vehicule.component';
+import { PieceOfEvidenceComponent } from './view/piece-of-evidence/piece-of-evidence.component';
+import { DetailPieceOfEvidenceComponent } from './view/piece-of-evidence/detail-piece-of-evidence/detail-piece-of-evidence.component';
+import { FormPieceOfEvidenceComponent } from './view/piece-of-evidence/form-piece-of-evidence/form-piece-of-evidence.component';
 
 
 // router table
@@ -20,6 +23,9 @@ const routes: Routes = [
  {path: 'vehicules', component: VehiculeComponent},
  {path: 'vehicules/:id', component: DetailVehiculeComponent,
   children: [{path: 'edit', component: FormVehiculeComponent}]},
+ {path: 'pieceOfEvidence', component: PieceOfEvidenceComponent},
+ {path: 'pieceOfEvidence/:id', component: DetailPieceOfEvidenceComponent,
+  children: [{path: 'edit', component: FormPieceOfEvidenceComponent}]},
  {path: 'newvehicule', component: FormVehiculeComponent},
  {path: 'cellules', component: CelluleComponent},
  {path: 'cellules/:id', component: DetailCelluleComponent},
