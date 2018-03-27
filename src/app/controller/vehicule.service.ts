@@ -16,6 +16,7 @@ export class VehiculeService {
   getVehicules(): Observable<Vehicule[]> {
     return this.http.get<Vehicule[]>(`${HOST}/vehicule`);
   }
+
   getVehicule(id: number): Observable<Vehicule> {
     return this.http.get<Vehicule>(`${HOST}/vehicule/` + id);
   }

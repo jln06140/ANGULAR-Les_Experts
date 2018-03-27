@@ -3,20 +3,155 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0px;
+}
+
+button {
+    color: rgb(190, 98, 12);
+}
+
+footer {
+    background-color: #042f52 !important;
+    height: 45px !important;
+    width: 100%;
+    vertical-align: middle !important;
+    line-height:0em;
+    color: white !important;
+    padding-bottom: -10;
+}
+
+mat-icon {
+    color: white !important;
+}
+
+mat-sidenav {
+    width: 200px;
+}
+
+mat-sidenav-container {
+    height: 85vh;
+}
+
+mat-sidenav-content {
+    background-color: rgb(250, 249, 211);
+}
+
+mat-toolbar {
+    background-color: #042f52 !important;
+    color: white !important;
+}
+
+.add {
+    background-color: rgb(190, 98, 12) !important;
+}
+
+.aligner {
+    display: flex;
+    float: left;
+}
+.alignerAuCentre {
+    text-align: center !important;
+}
+
+.alignerAGauche {
+    text-align: left !important;
+}
+
+.alignerADroite {
+    text-align: right !important;
+}
+
+
+.clicLigneTableau:hover {
+    background-color: rgba(4, 47, 82, 0.03);
+}
+
+.couleurBoutonForm {
+    background-color: rgb(190, 98, 12) !important;
+    color: white !important;
+}
+
+.envoyer {
+    background-color: rgb(190, 98, 12);
+    color: white !important;
+}
+
+.fond {
+    background-color: rgb(250, 249, 211);
+}
+
+.logo {
+    font-family: 'Ultra', serif;
+    font-size: 60px !important;
+    font-weight: bold !important;
+    text-align: center;
+    color: white;
 }
 
 .mat-card {
     margin: 10px;
 }
 
-.logo {
-    font-family: 'Ultra', serif;
-    font-size: 60px;
+.mat-fab {
+    display: flex;
+    float: left;
 }
 
-button {
-    color: #ff6d00;
+.matricule {
+    text-align: center;
+    margin-top: 0px;
 }
 
+.nom {
+    text-align: center;
+    margin: 0px;
+}
 
+.titreAffaire {
+    display: flex;
+    text-align: left;
+    height: 50px;
+    width: 760px;
+    line-height: 2em;
+    background-color: #042f52;
+    color: white;
+    font-size: 26px;
+}
+
+.titreDetail {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.titrePage {
+    display: flex;
+    text-align: left;
+    height: 50px;
+    width: 320px;
+    line-height: 2em;
+    background-color: #042f52;
+    color: white;
+    font-size: 26px;
+}
+
+.titrePageIcone {
+    float: left;
+    vertical-align: middle;
+}
+
+.titreTableau {
+    background-color: #abadb3;
+}
+
+.taillePoliceTitreTableau {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.userIcon {
+    height: 120px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+}

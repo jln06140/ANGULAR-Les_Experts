@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Weapon } from '../../../model/weapon';
+import { PopupService } from '../../../controller/popup.service';
 import { ActivatedRoute } from '@angular/router';
+import { WeaponService } from '../../../controller/weapon.service';
 import { CaseService } from '../../../controller/case.service';
 import { MatTableDataSource } from '@angular/material';
-
 
 @Component({
   selector: 'app-table-weapon',
@@ -10,11 +12,16 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./table-weapon.component.css']
 })
 export class TableWeaponComponent implements OnInit {
-  weaponColumns = ['type', 'modele', 'createDate', 'updateDate'];
-  weaponSource;
+  id: number;
   errText: string;
 
-  constructor(private route: ActivatedRoute, private caseService: CaseService) { }
+  weaponColumns = ['createDate', 'type', 'modele', 'updateDate'];
+  weaponSource;
+  constructor(
+    public caseService: CaseService,
+    public popupService: PopupService,
+    private route: ActivatedRoute,
+    private weaponService: WeaponService) { }
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
@@ -24,4 +31,8 @@ export class TableWeaponComponent implements OnInit {
     );
   }
 
+// ouverture du popup avec le contenu de la ligne en paramètre
+  // openDialog(row) {
+  //  this.popupService.openDialog(row);
+  // }
 }

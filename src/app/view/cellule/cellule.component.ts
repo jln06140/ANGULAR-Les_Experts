@@ -7,8 +7,8 @@ import { Case } from '../../model/case';
   styleUrls: ['./cellule.component.css']
 })
 export class CelluleComponent implements OnInit {
-  editing: boolean = true;
-  nombre: number = 0;
+  editing = true;
+  nombre = 0;
   policeCase: Case;
   arrayList = ['un', 'deux', 'trois'];
 
@@ -20,7 +20,7 @@ export class CelluleComponent implements OnInit {
   }
 
   changeEditing() {
-    this.editing != this.editing;
+    // this.editing !== this.editing;
   }
 
   addition() {

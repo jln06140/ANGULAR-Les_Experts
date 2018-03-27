@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Case } from '../../../model/case';
 import { CaseService } from '../../../controller/case.service';
-import {MatTableDataSource, MatPaginator} from '@angular/material';
+import { MatTableDataSource, MatPaginator} from '@angular/material';
 
 
 @Component({
@@ -10,15 +10,20 @@ import {MatTableDataSource, MatPaginator} from '@angular/material';
   styleUrls: ['./table-case.component.css']
 })
 export class TableCaseComponent implements OnInit {
-  caseColumns = ['date', 'name', 'description', 'button'];
+  caseColumns = ['date', 'name', 'description'];
   caseSource;
   errText: string;
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private caseService: CaseService) { }
 
   ngOnInit() {
     this.caseService.getCases().subscribe(
-      cases => this.caseSource = new MatTableDataSource(cases),
+      cases => {
+        this.caseSource = new MatTableDataSource(cases);
+        this.caseSource.paginator = this.paginator;
+      },
       err => this.errText = 'La requête a échouée'
     );
   }

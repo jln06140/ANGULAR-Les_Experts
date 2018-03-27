@@ -1,10 +1,8 @@
 // import des Modules Angular Material vers app-module.ts
-
 import { NgModule } from '@angular/core';
 import {
     MatCardModule,
     MatToolbarModule,
-    MatSortModule,
     MatIconModule,
     MatSidenavModule,
     MatFormFieldModule,
@@ -30,7 +28,6 @@ import { CdkTableModule } from '@angular/cdk/table';
         MatIconModule,
         MatSidenavModule,
         MatFormFieldModule,
-        MatSortModule,
         MatInputModule,
         MatButtonModule,
         MatSelectModule,
@@ -52,7 +49,6 @@ import { CdkTableModule } from '@angular/cdk/table';
         MatInputModule,
         MatButtonModule,
         MatSelectModule,
-        MatSortModule,
         MatSlideToggleModule,
         MatTableModule,
         MatTabsModule,

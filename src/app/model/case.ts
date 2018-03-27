@@ -9,17 +9,17 @@ import { Comment } from './comment';
 
 export interface Case {
     id?: number;
-    date: string;
-    name: string;
-    description: string;
-    listComment: Comment[];
-    listUser: User[];
-    listPhoto: Photo[];
-    pieceOfEvidence: PieceOfEvidence[];
-    listVictim: People[];
-    listSuspect: People[];
-    listWitness: People[];
-    weapon: Weapon[];
-    vehicule: Vehicule[];
-    listTag: Tag[];
+    date?: string;
+    name?: string;
+    description?: string;
+    comment?: Comment[];
+    user?: User[];
+    photo?: Photo[];
+    poE?: PieceOfEvidence[];
+    victim?: People[];
+    suspect?: People[];
+    witness?: People[];
+    weapon?: Weapon[];
+    vehicule?: Vehicule[];
+    tag?: Tag[];
 }

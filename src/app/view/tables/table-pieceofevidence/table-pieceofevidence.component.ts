@@ -21,10 +21,8 @@ export class TablePieceofevidenceComponent implements OnInit {
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.caseService.getCase(id).subscribe(
-      data => this.pieceOfEvidenceSource = new MatTableDataSource(data.pieceOfEvidence));
+      data => this.pieceOfEvidenceSource = new MatTableDataSource(data.poE));
 
   }
 
 }
-
-

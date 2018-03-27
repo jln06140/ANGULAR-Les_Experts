@@ -17,6 +17,7 @@ export class TablePieceOfEvidenceComponent implements OnInit {
 
  // Pagination
  @ViewChild(MatPaginator) paginator: MatPaginator;
+
  constructor(private poeService: PoeService) { }
 
  ngOnInit() {
