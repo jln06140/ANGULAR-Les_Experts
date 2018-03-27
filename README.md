@@ -41,7 +41,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### gérer les droits différentiels
 ### créer la section administration
 ### gérer l'aspect dynamique d'association de preuves/indices
-### proposer un dashboard de charts pourle chefde police
+### proposer un dashboard de charts pour le chef de police
 ### gérer les notifications liées à la messagerie
 ### crée la section scientifique
 ### aspect sécurité
@@ -50,4 +50,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### apliquer la charte graphique
 ### intégrer les tests unitaires
 ### intégrer les pipe nécessaires
+### sidenav en mode over en responsive
 

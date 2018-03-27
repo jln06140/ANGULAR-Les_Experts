@@ -16,7 +16,10 @@ import {
     MatDialogModule,
     MatListModule,
     MatPaginatorModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTooltipModule,
+    MatSortModule,
+    MatRadioModule
 } from '@angular/material';
 import { CdkTableModule } from '@angular/cdk/table';
 
@@ -39,7 +42,10 @@ import { CdkTableModule } from '@angular/cdk/table';
         MatListModule,
         MatPaginatorModule,
         MatProgressSpinnerModule,
-        CdkTableModule
+        CdkTableModule,
+        MatTooltipModule,
+        MatSortModule,
+        MatRadioModule
     ],
     exports: [
         MatCardModule,
@@ -57,7 +63,10 @@ import { CdkTableModule } from '@angular/cdk/table';
         MatListModule,
         MatPaginatorModule,
         MatProgressSpinnerModule,
-        CdkTableModule
+        CdkTableModule,
+        MatTooltipModule,
+        MatSortModule,
+        MatRadioModule
     ],
   })
   export class MaterialModule { }
