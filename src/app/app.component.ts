@@ -3,7 +3,7 @@ import { MatSidenav } from '@angular/material';
 
 @Component({
   selector: 'app-root',
-  template: '<router-outlet></router-outlet>'
+  template: '<app-navigation></app-navigation>'
 })
 export class AppComponent implements OnInit {
   title = 'app';

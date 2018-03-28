@@ -14,14 +14,13 @@ import { DetailWeaponComponent } from './modules/weapon/detail-weapon/detail-wea
 import { FormWeaponComponent } from './modules/weapon/form-weapon/form-weapon.component';
 
 // router table
-
- const routes: Routes = [
- {path: '', redirectTo: '/home/dashboard', pathMatch: 'full'},
+const routes: Routes = [
+ /* {path: '', redirectTo: '/home/dashboard', pathMatch: 'full'},
  {path: 'home', component: NavigationComponent,
-  children: [
+  children: [ */
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
     {path: 'dashboard', component: DashboardComponent},
-    {path: 'dashboard/:id', component: PageAffaireComponent},
+    {path: 'affaires/:id', component: PageAffaireComponent},
     {path: 'vehicules', component: VehiculeComponent},
     {path: 'vehicules/:id', component: DetailVehiculeComponent,
       children: [
@@ -36,7 +35,7 @@ import { FormWeaponComponent } from './modules/weapon/form-weapon/form-weapon.co
       children: [
         {path: 'edit', component: FormWeaponComponent}]},
     {path: 'newweapon', component: FormWeaponComponent}
-  ]},
+  // ]}
 ];
 
 @NgModule({

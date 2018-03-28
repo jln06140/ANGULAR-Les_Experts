@@ -9,7 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
-import { CoreModule } from './core/core.module';
 import { TableCaseComponent } from './tables/table-case/table-case.component';
 import { TableWeaponComponent } from './tables/table-weapon/table-weapon.component';
 import { TableVehiculeComponent } from './tables/table-vehicule/table-vehicule.component';
@@ -41,6 +40,18 @@ import { WeaponComponent } from './modules/weapon/weapon.component';
 import { DetailWeaponComponent } from './modules/weapon/detail-weapon/detail-weapon.component';
 import { FormWeaponComponent } from './modules/weapon/form-weapon/form-weapon.component';
 import { TableWeaponsComponent } from './tables/table-weapons/table-weapons.component';
+import { CaseService } from './core/api/case.service';
+import { WeaponService } from './core/api/weapon.service';
+import { VehiculeService } from './core/api/vehicule.service';
+import { PoeService } from './core/api/poe.service';
+import { WitnessService } from './core/api/witness.service';
+import { SuspectService } from './core/api/suspect.service';
+import { VictimService } from './core/api/victim.service';
+import { CommentService } from './core/api/comment.service';
+
+
+
+
 
 
 @NgModule({
@@ -84,14 +95,25 @@ import { TableWeaponsComponent } from './tables/table-weapons/table-weapons.comp
     MaterialModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    CoreModule
+    HttpClientModule
   ],
   exports: [
     MaterialModule
   ],
   entryComponents: [PopupVehiculeComponent, PopupDeleteLinkComponent, PopupAssociateComponent],
-  providers: [HttpClientModule, PageAffaireComponent, PopupService],
+  providers: [
+    HttpClientModule,
+    PageAffaireComponent,
+    PopupService,
+    CaseService,
+    WeaponService,
+    VehiculeService,
+    PoeService,
+    WitnessService,
+    SuspectService,
+    VictimService,
+    CommentService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
