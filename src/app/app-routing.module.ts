@@ -25,11 +25,12 @@ const routes: Routes = [
     {path: 'vehicules/:id', component: DetailVehiculeComponent,
       children: [
         {path: 'edit', component: FormVehiculeComponent}]},
+    {path: 'newvehicule', component: FormVehiculeComponent},
     {path: 'pieceOfEvidence', component: PieceOfEvidenceComponent},
     {path: 'pieceOfEvidence/:id', component: DetailPieceOfEvidenceComponent,
       children: [
         {path: 'edit', component: FormPieceOfEvidenceComponent}]},
-    {path: 'newvehicule', component: FormVehiculeComponent},
+    {path: 'newpieceOfEvidence', component: FormPieceOfEvidenceComponent},
     {path: 'weapons', component: WeaponComponent},
     {path: 'weapons/:id', component: DetailWeaponComponent,
       children: [

@@ -4,8 +4,9 @@
     left: 0;
     margin: 20px;
 }
+
 mat-toolbar {
    font-size: 16px;
    text-align: center;
-   height: 40px;
+   height: 40px !important;
 }
