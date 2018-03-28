@@ -3,6 +3,7 @@ export interface Admin {
     login: string;
     password: string;
 }
+
 export interface Case {
     id?: number;
     date: string;
@@ -19,18 +20,21 @@ export interface Case {
     vehicule: Vehicule[];
     listTag: Tag[];
 }
+
 export interface Comment {
     id?: number;
     date: string;
     text: string;
     user: User;
 }
+
 export interface Message {
     id?: number;
     date: string;
     description: string;
     user: User;
 }
+
 export interface People {
     id?: number;
     date: string;
@@ -54,6 +58,7 @@ export interface People {
     listTag: Tag[];
     listPeopleLink: People[];
 }
+
 export interface Photo {
     id?: number;
     date: string;
@@ -64,6 +69,7 @@ export interface Photo {
     listCase: Case[];
     listTag: Tag[];
 }
+
 export interface PieceOfEvidence {
     id?: number;
     createDate: Date;
@@ -76,12 +82,15 @@ export interface PieceOfEvidence {
     // listCase: Case [];
     // listTag: Tag[];
 }
+
 export interface Role {
     name: string;
 }
+
 export interface Tag {
     name: string;
 }
+
 export interface User {
     firstName: string;
     lastName: string;
@@ -89,6 +98,7 @@ export interface User {
     password: string;
     photo: Photo;
 }
+
 export interface Vehicule {
     id?: number;
     marque: string;
@@ -99,6 +109,7 @@ export interface Vehicule {
     updateDate: Date;
     listCase: Case [];
 }
+
 export interface Weapon {
     id?: number;
     type: string;

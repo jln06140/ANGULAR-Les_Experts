@@ -3,13 +3,13 @@
     <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
     <mat-cell *matCellDef="let row">{{row.date}}</mat-cell>
   </ng-container>
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef fxHide.xs>Nom</mat-header-cell>
+    <mat-cell *matCellDef="let row" fxHide.xs>{{row.name}}</mat-cell>
+  </ng-container>
   <ng-container matColumnDef="description">
     <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
     <mat-cell *matCellDef="let row">{{row.description}}</mat-cell>
-  </ng-container>
-  <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef fxHide.xs>Nom</mat-header-cell>
-    <mat-cell *matCellDef="let row" fxHide.xs></mat-cell>
   </ng-container>
   <mat-header-row *matHeaderRowDef="messageAffaireColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: messageAffaireColumns"></mat-row>
