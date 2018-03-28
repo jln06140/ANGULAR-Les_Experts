@@ -12,14 +12,13 @@ import { FormPieceOfEvidenceComponent } from './modules/piece-of-evidence/form-p
 
 
 // router table
-
- const routes: Routes = [
- {path: '', redirectTo: '/home/dashboard', pathMatch: 'full'},
+const routes: Routes = [
+ /* {path: '', redirectTo: '/home/dashboard', pathMatch: 'full'},
  {path: 'home', component: NavigationComponent,
-  children: [
+  children: [ */
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
     {path: 'dashboard', component: DashboardComponent},
-    {path: 'dashboard/:id', component: PageAffaireComponent},
+    {path: 'affaires/:id', component: PageAffaireComponent},
     {path: 'vehicules', component: VehiculeComponent},
     {path: 'vehicules/:id', component: DetailVehiculeComponent,
       children: [
@@ -29,7 +28,7 @@ import { FormPieceOfEvidenceComponent } from './modules/piece-of-evidence/form-p
       children: [
         {path: 'edit', component: FormPieceOfEvidenceComponent}]},
     {path: 'newvehicule', component: FormVehiculeComponent}
-  ]},
+  // ]},
 ];
 
 @NgModule({

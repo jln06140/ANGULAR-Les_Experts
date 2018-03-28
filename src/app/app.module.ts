@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
-import { CoreModule } from './core/core.module';
 import { TableCaseComponent } from './tables/table-case/table-case.component';
 import { TableWeaponComponent } from './tables/table-weapon/table-weapon.component';
 import { TableVehiculeComponent } from './tables/table-vehicule/table-vehicule.component';
@@ -37,6 +36,14 @@ import { PopupService } from './core/popup.service';
 import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { NavigationComponent } from './core/navigation/navigation.component';
 import { MessageAffaireComponent } from './modules/pages/page-affaire/message-affaire/message-affaire.component';
+import { CaseService } from './core/api/case.service';
+import { WeaponService } from './core/api/weapon.service';
+import { VehiculeService } from './core/api/vehicule.service';
+import { PoeService } from './core/api/poe.service';
+import { WitnessService } from './core/api/witness.service';
+import { SuspectService } from './core/api/suspect.service';
+import { VictimService } from './core/api/victim.service';
+import { CommentService } from './core/api/comment.service';
 
 
 
@@ -80,14 +87,25 @@ import { MessageAffaireComponent } from './modules/pages/page-affaire/message-af
     MaterialModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    CoreModule
+    HttpClientModule
   ],
   exports: [
     MaterialModule
   ],
   entryComponents: [PopupVehiculeComponent, PopupDeleteLinkComponent, PopupAssociateComponent],
-  providers: [HttpClientModule, PageAffaireComponent, PopupService],
+  providers: [
+    HttpClientModule,
+    PageAffaireComponent,
+    PopupService,
+    CaseService,
+    WeaponService,
+    VehiculeService,
+    PoeService,
+    WitnessService,
+    SuspectService,
+    VictimService,
+    CommentService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
