@@ -38,12 +38,13 @@ Créer la partie front de l'application :
     
     => app-routing :permet de charger et de configurer les routes dans les différents modules du projet
     
-    => modules : composants "classique", composé de 4 fichiers :
+    => composants "classique" : typiquement composés de 4 fichiers :
+    
     ~ .html : architecture du composant
     ~ .css : habillage du composant (souvent remplacé par le style.css à la racine)
     ~ .ts : action du module et liens avec les autres
     ~ .spec.ts : utilisé pour tester le module
     
-    Pour démarrer l'application, il suffira d'entrer dans la console ng serve, puis de se connecter dans un navigateur à l'adresse http://localhost:4200
+Pour démarrer l'application, il suffira d'entrer dans la console ng serve, puis de se connecter dans un navigateur à l'adresse http://localhost:4200
 
 
