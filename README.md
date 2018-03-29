@@ -1,5 +1,9 @@
-Projet Fil Rouge
+###Projet Fil Rouge
 
+
+<p align="center">
+  <img src="..\assets\images\titre-fil-rouge.png"/>
+</p>
 Conçu et réalisé par l'équipe GGSF (Gérome Gilles Stéphan Frédéric)
 
 Partie Front
