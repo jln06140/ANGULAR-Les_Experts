@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="..\assets\images\titre-fil-rouge.png"/>
+  <img src=".\assets\images\titre-fil-rouge.png"/>
 </p>
 Conçu et réalisé par l'équipe GGSF (Gérome Gilles Stéphan Frédéric)
 
