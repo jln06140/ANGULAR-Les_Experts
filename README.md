@@ -1,7 +1,7 @@
 **Projet Fil Rouge**
 
 
-<p align="center">
+<p>
   <img src=".\src\assets\images\titre-fil-rouge.png"/>
 </p>
 Conçu et réalisé par l'équipe GGSF (Gérôme Gilles Stéphan Frédéric)
