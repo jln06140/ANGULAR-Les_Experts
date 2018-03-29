@@ -4,7 +4,7 @@
 <p align="center">
   <img src=".\src\assets\images\titre-fil-rouge.png"/>
 </p>
-Conçu et réalisé par l'équipe GGSF (Gérome Gilles Stéphan Frédéric)
+Conçu et réalisé par l'équipe GGSF (Gérôme Gilles Stéphan Frédéric)
 
 ----------
 
