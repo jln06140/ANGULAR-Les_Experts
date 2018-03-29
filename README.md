@@ -1,4 +1,4 @@
-###Projet Fil Rouge
+**Projet Fil Rouge**
 
 
 <p align="center">
@@ -6,7 +6,9 @@
 </p>
 Conçu et réalisé par l'équipe GGSF (Gérome Gilles Stéphan Frédéric)
 
-Partie Front
+----------
+
+*Partie Front*
 
 Pré-requis :
 
@@ -26,29 +28,35 @@ Personnellement, j'ai particulièrement travaillé sur la partie UML, design (mo
 
 Créer la partie front de l'application :
 
-    - créer un nouveau projet : ng new <nom du projet>
-
-    - créer des composants : ng generate componant <nom du componant> (ou ng g c <nom du componant>)
+    - créer un nouveau projet : **ng new <nom du projet>**
     
-    - selon le modèle MVC (Modèle Vue Controleur), ou plutôt MVVM, l'architecture d'Anguler se décompose ainsi :
+    - créer des composants : **ng generate componant <nom du componant>** 
+      (ou **ng g c <nom du componant>**)
     
-    => services : utilisés pour injecter du code (signalé par @Injectable()) dans différents composants, et qui sera utilsable (à condition d'importer le service dans chaque composant). On le crée avec ng g s <nom>
+    - selon le modèle MVC (Modèle Vue Controleur), ou plutôt MVVM, l'architecture 
+      d'Angular se décompose ainsi :
+    
+    => services : utilisés pour injecter du code (signalé par @Injectable()) 
+       dans différents composants, et qui sera utilsable (à condition d'importer
+       le service dans chaque composant). On le crée avec **ng g s <nom>**
     
     => app-module : c'est le module racine, qui se divise en 2 parties :
     
-    ~ les imports : peut importer des librairies externes, d'autres modules, ... pour les rendre utilisable dans tout le projet
+    ~ les imports : peut importer des librairies externes, d'autres modules, ...
+      pour les rendre utilisable dans tout le projet
     
     ~ les décorateurs : intervient dans l'injection du code et la compilation des templates
     
-    => app-routing :permet de charger et de configurer les routes dans les différents modules du projet
+    => app-routing :permet de charger et de configurer les routes dans les différents
+       modules du projet
     
     => composants "classique" : typiquement composés de 4 fichiers :
     
-    ~ .html : architecture du composant
-    ~ .css : habillage du composant (souvent remplacé par le style.css à la racine)
-    ~ .ts : action du module et liens avec les autres
-    ~ .spec.ts : utilisé pour tester le module
+    ~ **.html** : architecture du composant
+    ~ **.css** : habillage du composant (souvent remplacé par le style.css à la racine)
+    ~ **.ts** : action du module et liens avec les autres
+    ~ **.spec.ts** : utilisé pour tester le module
     
-Pour démarrer l'application, il suffira d'entrer dans la console ng serve, puis de se connecter dans un navigateur à l'adresse http://localhost:4200
+Pour démarrer l'application, il suffira d'entrer dans la console **ng serve**, puis de se connecter dans un navigateur à l'adresse **http://localhost:4200**
 
 
