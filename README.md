@@ -1,54 +1,54 @@
-# RedString
+###Projet Fil Rouge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
-## Development server
+<p align="center">
+  <img src=".\src\assets\images\titre-fil-rouge.png"/>
+</p>
+Conçu et réalisé par l'équipe GGSF (Gérome Gilles Stéphan Frédéric)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Partie Front
 
-## Code scaffolding
+Pré-requis :
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    NPM : 5.7.1
+    NodeJS : 8.9.1
+    Angular CLI : 1.6.8
 
-## Build
+Mode opératoire :
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+1 - Installer NodeJS  
+2 - Installer NPM  
+3 - Installer Angular CLI  
+4 - Installer les différents packages dans la console de l'IDE choisi (ici VS Code) et chercher des mises à jour  
+5 - Importer le projet sous l'IDE et le mettre à jour (NPM install)
 
-## Running unit tests
+Personnellement, j'ai particulièrement travaillé sur la partie UML, design (mokup, CSS) et "arme" du projet
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Créer la partie front de l'application :
 
-## Running end-to-end tests
+    - créer un nouveau projet : ng new <nom du projet>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+    - créer des composants : ng generate componant <nom du componant> (ou ng g c <nom du componant>)
+    
+    - selon le modèle MVC (Modèle Vue Controleur), ou plutôt MVVM, l'architecture d'Anguler se décompose ainsi :
+    
+    => services : utilisés pour injecter du code (signalé par @Injectable()) dans différents composants, et qui sera utilsable (à condition d'importer le service dans chaque composant). On le crée avec ng g s <nom>
+    
+    => app-module : c'est le module racine, qui se divise en 2 parties :
+    
+    ~ les imports : peut importer des librairies externes, d'autres modules, ... pour les rendre utilisable dans tout le projet
+    
+    ~ les décorateurs : intervient dans l'injection du code et la compilation des templates
+    
+    => app-routing :permet de charger et de configurer les routes dans les différents modules du projet
+    
+    => composants "classique" : typiquement composés de 4 fichiers :
+    
+    ~ .html : architecture du composant
+    ~ .css : habillage du composant (souvent remplacé par le style.css à la racine)
+    ~ .ts : action du module et liens avec les autres
+    ~ .spec.ts : utilisé pour tester le module
+    
+Pour démarrer l'application, il suffira d'entrer dans la console ng serve, puis de se connecter dans un navigateur à l'adresse http://localhost:4200
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## TO DO List
-
-### Ajouter des colonnes visibles en mode portable paysage
-### créer et insérer les tables case/comment/tag aux popup
-### créer l'API
-### trouver une solution pour router sur le nom "police"
-### mettre à jour les menus de navigation
-### trouver une solution pour page /affaire vierge via le router
-### transformer en PWA
-### créer la section de création d'éléments
-### créer la transformation en édition des popup
-### ajouter les fonctions dela messagerie dans la création/édition
-### gérer les droits différentiels
-### créer la section administration
-### gérer l'aspect dynamique d'association de preuves/indices
-### proposer un dashboard de charts pour le chef de police
-### gérer les notifications liées à la messagerie
-### crée la section scientifique
-### aspect sécurité
-### authentification
-### trouver uen solution contre les visibility true/false dans le navigateur
-### apliquer la charte graphique
-### intégrer les tests unitaires
-### intégrer les pipe nécessaires
-### sidenav en mode over en responsive
 
