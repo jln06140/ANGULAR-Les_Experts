@@ -50,10 +50,6 @@ import { VictimService } from './core/api/victim.service';
 import { CommentService } from './core/api/comment.service';
 
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,

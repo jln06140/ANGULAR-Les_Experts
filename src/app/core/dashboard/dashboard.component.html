@@ -1,20 +1,13 @@
 <section fxLayout="row" fxLayout.xs="column">
   <!-- historique des événements -->
   <mat-card fxFlex="40">
-    <div class='bandeau' fxLayoutAlign='start center'>
-      <h4 fxLayoutAlign='center center'>Historique</h4>
-      </div>
+      <div class="titrePage"><img src="assets/icones/icone-historique.png"/>&nbsp;&nbsp;&nbsp;<b>Historique</b></div>
       <app-message-affaire></app-message-affaire>
+      <h4 style="text-align: center; color: rgb(184, 25, 25)">[Fonctionnalité à venir]</h4>
     </mat-card>
   <!-- table d'affaires -->
   <mat-card fxFlex="60">
-      <div class='bandeau' fxLayoutAlign='space-between center'>
-        <h4 fxLayoutAlign='center center'>Affaires</h4>
-        <mat-radio-group>
-          <mat-radio-button value="1" class='radio' checked>en cours</mat-radio-button>
-          <mat-radio-button value="2" class='radio'>clôturées</mat-radio-button>
-        </mat-radio-group>
-      </div>
+      <div class="titrePage"><img src="assets/icones/icone-actuel.png"/>&nbsp;&nbsp;&nbsp;<b>Affaires en cours</b></div>
       <app-table-case></app-table-case>
   </mat-card>
 </section>

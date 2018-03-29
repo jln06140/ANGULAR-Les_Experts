@@ -23,18 +23,15 @@ const routes: Routes = [
     {path: 'affaires/:id', component: PageAffaireComponent},
     {path: 'vehicules', component: VehiculeComponent},
     {path: 'vehicules/:id', component: DetailVehiculeComponent,
-      children: [
-        {path: 'edit', component: FormVehiculeComponent}]},
+      children: [{path: 'edit', component: FormVehiculeComponent}]},
     {path: 'newvehicule', component: FormVehiculeComponent},
     {path: 'pieceOfEvidence', component: PieceOfEvidenceComponent},
     {path: 'pieceOfEvidence/:id', component: DetailPieceOfEvidenceComponent,
-      children: [
-        {path: 'edit', component: FormPieceOfEvidenceComponent}]},
+      children: [{path: 'edit', component: FormPieceOfEvidenceComponent}]},
     {path: 'newpieceOfEvidence', component: FormPieceOfEvidenceComponent},
     {path: 'weapons', component: WeaponComponent},
     {path: 'weapons/:id', component: DetailWeaponComponent,
-      children: [
-        {path: 'edit', component: FormWeaponComponent}]},
+      children: [{path: 'edit', component: FormWeaponComponent}]},
     {path: 'newweapon', component: FormWeaponComponent}
   // ]}
 ];

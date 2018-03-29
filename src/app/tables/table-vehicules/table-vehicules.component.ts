@@ -8,8 +8,8 @@ import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
   styleUrls: ['./table-vehicules.component.css']
 })
 export class TableVehiculesComponent implements OnInit {
-  // tableau des colonnes dutableau affichées
-  vehiculeColumns = ['date', 'model', 'brand', 'color', 'licensePlate', 'updateDate'];
+  // colonnes dutableau affichées
+  vehiculeColumns = ['date', 'model', 'marque', 'color', 'licensePlate', 'updateDate'];
   // source des informations envoyées dans le tableau
   vehiculeSource;
   errText: string;

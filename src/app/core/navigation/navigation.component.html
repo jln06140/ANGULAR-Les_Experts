@@ -1,10 +1,10 @@
 <!-- header -->
 <div class="container">
     <mat-toolbar>
-        <mat-toolbar-row fxLayoutAlign="start center">
-            <button mat-button id="navButton" (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
-            <h1 class="logo" routerLink="/dashboard">POLICE</h1>
-        </mat-toolbar-row>
+        <mat-toolbar-row fxLayout="row">
+            <button mat-button><mat-icon (click)="sidenav.toggle()" fxFlex="20">menu</mat-icon></button>
+            <h1 class="logo" fxFlex="80" routerLink="/dashboard">POLICE SIMPLON</h1><img class="titrePageIcone" src="assets/icones/icone-police.png"/>
+        </mat-toolbar-row>   
     </mat-toolbar>
     
     <!-- barre de navigation -->
@@ -12,15 +12,15 @@
         <mat-sidenav #sidenav mode='side'>
     <!-- contenu du menu de navigation -->
     <!-- Identité utilisateur -->
-            <img src="assets/images/AvatarIcon.png" class="userIcon" style="text-align: center"/>
+            <img src="assets/images/UserIcon.png" class="userIcon" style="text-align: center"/>
             <mat-card class='identity' *ngIf='user'>
-            <h4 class="nom">Gérôme Grignon</h4>
-            <h6 class="matricule">Agent n°0860</h6>
+                <h4 class="nom">Facteur expert</h4>
+                <h6 class="matricule">Agent ZKT569</h6>
             </mat-card>
             <mat-card class='identity' *ngIf='!user'>
-                <h4 class="nom">Gérôme Grignon</h4>
-                <h6 class="matricule">Agent n°0860</h6>
-                </mat-card>
+                <h4 class="nom">Facteur expert</h4>
+                <h6 class="matricule">Agent ZKT569</h6>
+            </mat-card>
 
     <!-- liens de navigation -->
             <mat-nav-list>
@@ -35,4 +35,19 @@
             <router-outlet></router-outlet>
         </mat-sidenav-content>
     </mat-sidenav-container>
-    </div>
+
+
+<footer>
+        <div fxLayout="row">
+            <div fxFlex="33" class="alignerAuCentre">
+                <h4>Conception </h4>
+            </div>
+            <div fxFlex="34" fxLayoutAlign="center">
+                <img class="titrePageIcone" src="assets/icones/icone-simplon.png"/>
+            </div>
+            <div fxFlex="33" class="alignerAuCentre">
+                <h4>&copy; GGSF - mars 2018</h4>
+            </div>
+        </div>
+</footer>
+</div>

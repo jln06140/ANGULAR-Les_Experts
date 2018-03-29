@@ -35,8 +35,7 @@ export class DetailWeaponComponent implements OnInit {
   }
 
   delete() {
-    this.weaponService.deleteWeapon(this.id)
-    .subscribe( () =>
+    this.weaponService.deleteWeapon(this.id).subscribe( () =>
       this.router.navigate(['../'], { relativeTo: this.route }));
   }
 }
