@@ -12,36 +12,38 @@ Pré-requis :
 
 Mode opératoire :
 
-1 - Installer NodeJS
-2 - Installer NPM
-3 - Installer Angular CLI
-4 - Installer les différents packages dans la console de l'IDE choisi (ici VS Code) et chercher des mises à jour
+1 - Installer NodeJS  
+2 - Installer NPM  
+3 - Installer Angular CLI  
+4 - Installer les différents packages dans la console de l'IDE choisi (ici VS Code) et chercher des mises à jour  
 5 - Importer le projet sous l'IDE et le mettre à jour (NPM install)
 
 Personnellement, j'ai particulièrement travaillé sur la partie UML, design (mokup, CSS) et "arme" du projet
 
 Créer la partie front de l'application :
 
-    préparer les diagrammes UML : use case, diagramme des classes, diagramme d'activité, diagramme de base
+    - créer un nouveau projet : ng new <nom du projet>
 
-    faire quelques maquettes d'écrans
-
-    créer les bases de données (et les remplir)
-
-    créer les classes java, en lien avec Spring et Hiberbate :
-
-=> modèle : cette classe permet de créer et nommer une table, ainsi que ses champs et leurs caractéristiques (nom, non null, clé primaire, ...)
-
-=> DAO : interface, qui va permettre ici de supprimer le lien qu'un objet peut avoir entre 2 tables (mais sans toucher à l'objet même)
-
-=> contrôleur : s'occupe de récupérer les données et de les renvoyer, après traitement, au client. Il crée aunsi une URI et agit au niveau du CRUD
-
-=> repository : interface permettant d'activer les méthodes du CRUD pour une table donnée
-
-=> JDBC : instruction SQL déjà compilée (plus sécurisée), pour ici supprimer le lien qu'un objet peut posseder entre 2 tables
-
-=> service :
-
-    pour démarrer l'application, il suffira de lancer, sur la classe Main, un "Run As", puis de choisir "Spring boot app"
+    - créer des composants : ng generate componant <nom du componant> (ou ng g c <nom du componant>)
+    
+    - selon le modèle MVC (Modèle Vue Controleur), ou plutôt MVVM, l'architecture d'Anguler se décompose ainsi :
+    
+    => services : utilisés pour injecter du code (signalé par @Injectable()) dans différents composants, et qui sera utilsable (à condition d'importer le service dans chaque composant). On le crée avec ng g s <nom>
+    
+    => app-module : c'est le module racine, qui se divise en 2 parties :
+    
+    ~ les imports : peut importer des librairies externes, d'autres modules, ... pour les rendre utilisable dans tout le projet
+    
+    ~ les décorateurs : intervient dans l'injection du code et la compilation des templates
+    
+    => app-routing :permet de charger et de configurer les routes dans les différents modules du projet
+    
+    => modules : composants "classique", composé de 4 fichiers :
+    ~ .html : architecture du composant
+    ~ .css : habillage du composant (souvent remplacé par le style.css à la racine)
+    ~ .ts : action du module et liens avec les autres
+    ~ .spec.ts : utilisé pour tester le module
+    
+    Pour démarrer l'application, il suffira d'entrer dans la console ng serve, puis de se connecter dans un navigateur à l'adresse http://localhost:4200
 
 
