@@ -10,7 +10,7 @@
 </ng-container>
 <ng-container matColumnDef="date">
   <mat-header-cell *matHeaderCellDef fxHide.xs mat-sort-header>Date de création</mat-header-cell>
-  <mat-cell *matCellDef="let row" fxHide.xs>{{row.date}}</mat-cell>
+  <mat-cell *matCellDef="let row" fxHide.xs>{{row.dateCreation | date: 'dd-MM-yyyy'}}</mat-cell>
 </ng-container>
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef mat-sort-header>Nom</mat-header-cell>

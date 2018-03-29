@@ -9,7 +9,9 @@ import { FormVehiculeComponent } from './modules/vehicule/form-vehicule/form-veh
 import { PieceOfEvidenceComponent } from './modules/piece-of-evidence/piece-of-evidence.component';
 import { DetailPieceOfEvidenceComponent } from './modules/piece-of-evidence/detail-piece-of-evidence/detail-piece-of-evidence.component';
 import { FormPieceOfEvidenceComponent } from './modules/piece-of-evidence/form-piece-of-evidence/form-piece-of-evidence.component';
-
+import { WeaponComponent } from './modules/weapon/weapon.component';
+import { DetailWeaponComponent } from './modules/weapon/detail-weapon/detail-weapon.component';
+import { FormWeaponComponent } from './modules/weapon/form-weapon/form-weapon.component';
 
 // router table
 const routes: Routes = [
@@ -23,12 +25,18 @@ const routes: Routes = [
     {path: 'vehicules/:id', component: DetailVehiculeComponent,
       children: [
         {path: 'edit', component: FormVehiculeComponent}]},
+    {path: 'newvehicule', component: FormVehiculeComponent},
     {path: 'pieceOfEvidence', component: PieceOfEvidenceComponent},
     {path: 'pieceOfEvidence/:id', component: DetailPieceOfEvidenceComponent,
       children: [
         {path: 'edit', component: FormPieceOfEvidenceComponent}]},
-    {path: 'newvehicule', component: FormVehiculeComponent}
-  // ]},
+    {path: 'newpieceOfEvidence', component: FormPieceOfEvidenceComponent},
+    {path: 'weapons', component: WeaponComponent},
+    {path: 'weapons/:id', component: DetailWeaponComponent,
+      children: [
+        {path: 'edit', component: FormWeaponComponent}]},
+    {path: 'newweapon', component: FormWeaponComponent}
+  // ]}
 ];
 
 @NgModule({

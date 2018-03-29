@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./message-affaire.component.css']
 })
 export class MessageAffaireComponent implements OnInit {
-  messageAffaireColumns = ['date', 'description', 'name'];
+  messageAffaireColumns = ['date', 'name', 'description'];
 // USER TESTING
   messageAffaireSource = generatedListMessageAffaire;
 
@@ -14,7 +14,6 @@ export class MessageAffaireComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
 
 // USER TESTING
@@ -26,7 +25,8 @@ export interface Message {
 
 // USER TESTING
 const generatedListMessageAffaire: Message[] = [
-  {date: '21/05/1983', description : 'message 1', name: 'Gérôme'},
-  {date: '21/05/1983', description : 'message 2', name: 'Toto'},
+  {date: '26/03/2018', name: 'Gérôme', description : 'Essai de cas 1'},
+  {date: '31/12/1999', name: 'Gilles', description : 'Essai de cas 2'},
+  {date: '14/07/1989', name: 'Stéphan', description : 'Essai de cas 3'},
+  {date: '01/01/1970', name: 'Frédéric', description : 'Essai de cas 4'},
 ];
-

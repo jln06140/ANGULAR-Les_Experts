@@ -2,8 +2,10 @@
 <mat-card><!-- titre -->
   <div class='bandeau' fxLayoutAlign='space-between center'>
       <h4 fxLayoutAlign='center center'>Liste des véhicules</h4>
-      <button mat-raised-button color='accent' class='lastbutton'>Ajouter un véhicule</button>
+      <div class='lastbutton'>
+        <button mat-raised-button color='accent' routerLink="/newvehicule">Ajouter un vehicule</button>
       </div>
+  </div>
 
 <!-- tableau -->
 <section>
@@ -52,7 +54,3 @@
                  [showFirstLastButtons]="true">
   </mat-paginator>
 </section>
-
-<!-- router pour nouveau véhicule -->
-<button mat-fab class="add" routerLink="/newvehicule"><mat-icon>add</mat-icon></button>
-</mat-card>

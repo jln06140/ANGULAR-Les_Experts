@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './/app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
 import { TableCaseComponent } from './tables/table-case/table-case.component';
 import { TableWeaponComponent } from './tables/table-weapon/table-weapon.component';
@@ -36,6 +36,10 @@ import { PopupService } from './core/popup.service';
 import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { NavigationComponent } from './core/navigation/navigation.component';
 import { MessageAffaireComponent } from './modules/pages/page-affaire/message-affaire/message-affaire.component';
+import { WeaponComponent } from './modules/weapon/weapon.component';
+import { DetailWeaponComponent } from './modules/weapon/detail-weapon/detail-weapon.component';
+import { FormWeaponComponent } from './modules/weapon/form-weapon/form-weapon.component';
+import { TableWeaponsComponent } from './tables/table-weapons/table-weapons.component';
 import { CaseService } from './core/api/case.service';
 import { WeaponService } from './core/api/weapon.service';
 import { VehiculeService } from './core/api/vehicule.service';
@@ -78,7 +82,11 @@ import { CommentService } from './core/api/comment.service';
     AssociateVehiculeComponent,
     DashboardComponent,
     NavigationComponent,
-    MessageAffaireComponent
+    MessageAffaireComponent,
+    WeaponComponent,
+    DetailWeaponComponent,
+    FormWeaponComponent,
+    TableWeaponsComponent
   ],
   imports: [
     BrowserModule,

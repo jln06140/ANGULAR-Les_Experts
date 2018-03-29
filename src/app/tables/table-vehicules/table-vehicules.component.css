@@ -1,9 +1,10 @@
- .add {
+.add {
      position: fixed;
      bottom: 0;
      left: 0;
      margin: 20px;
- }
+}
+
 mat-toolbar {
     font-size: 16px;
     text-align: center;
