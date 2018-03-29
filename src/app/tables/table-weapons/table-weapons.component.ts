@@ -9,16 +9,20 @@ import { MatTableDataSource, MatPaginator, MatIconRegistry, MatSort } from '@ang
 })
 
 export class TableWeaponsComponent implements OnInit {
+  // différentes colonnes du tableau
   weaponColumns = ['createDate', 'type', 'modele', 'updateDate'];
+  // infos envoyées dans le tableau
   weaponSource;
-  errText: string;
 
+  // mise en page : nb éléments par page
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  // mise en page : tri par colonne
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(private weaponService: WeaponService) { }
 
   ngOnInit() {
+    // requête au chargement de la page
     this.weaponService.getWeapons().subscribe(
       cases => {
         this.weaponSource = new MatTableDataSource(cases);
@@ -27,9 +31,10 @@ export class TableWeaponsComponent implements OnInit {
       });
   }
 
+  // recherche dans le tableau
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // enleve les espaces
-    filterValue = filterValue.toLowerCase();
+    filterValue = filterValue.toLowerCase(); // passe tout en minuscule
     this.weaponSource.filter = filterValue;
   }
 

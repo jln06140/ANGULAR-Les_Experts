@@ -1,38 +1,39 @@
 <section fxLayout="row" fxLayout.xs="column">
 
   <!-- intitulé/description de l'affaire -->
-  <mat-card fxFlex="40">
-    <div class='bandeau' fxLayoutAlign='start center'>
-    <h4>Affaire : {{policeCase?.name}}</h4>
+  <mat-card fxFlex="60">
+    <div class="titrePage"><img src="assets/icones/icone-actuel.png"/>&nbsp;&nbsp;&nbsp;<b>Affaire : {{policeCase?.name}}</b>
     </div>
     <mat-card>
-      <p>Description:</p>
+      <p><u>Description:</u></p>
       <p>{{policeCase?.description}}</p>
     </mat-card> 
   </mat-card>
 
   <!-- historique des messages -->
-  <mat-card fxFlex="60">
-      <div class='bandeau' fxLayoutAlign='start center'>
-        <h4>Historique</h4>
-    </div>
-    <app-message-affaire></app-message-affaire>
+  <mat-card fxFlex="40">
+      <div class="titrePage"><img src="assets/icones/icone-historique.png"/>&nbsp;&nbsp;&nbsp;<b>Historique</b>
+      </div>
+        <app-message-affaire></app-message-affaire>
   </mat-card>
 </section>
 
 <mat-card>
   <!-- Titre "Sections et boutons d'actions" -->
-  <div fxLayoutAlign='space-between center' class='bandeau' fxlayout='row'>
-  <h4 class='nomsection' fxHide.xs>Sections</h4>
-  <div fxLayoutAlign="end stretch" fxLayoutGap="20px">
-  <button mat-raised-button color="accent">
-    <span matTooltip="Associer un élément existant">Associer</span>
-  </button>
-  <button mat-raised-button color="accent" (click)="openDialog()" class="lastbutton">
-    <span matTooltip="Créer & Associer un nouvel élément">Créer & Associer</span>
-  </button>
-</div>
+  <div fxLayout="row">
+      <div fxFlex="90" class="titrePage">
+        <img src="assets/icones/icone-affaire.png"/>&nbsp;&nbsp;&nbsp;<b>Sections</b>
+      </div>
+      <div fxLayoutAlign="end" fxLayoutGap="20px">
+          <button mat-raised-button class="envoyer"><mat-icon>crop</mat-icon>
+            <span matTooltip="Associer un élément existant">Associer</span>
+           </button>
+          <button mat-raised-button class="envoyer lastbutton" (click)="openDialog()"><mat-icon>crop_rotate</mat-icon>
+            <span matTooltip="Créer & Associer un nouvel élément">Créer & Associer</span>
+          </button>
+      </div>
   </div>
+  
   <!-- Sections -->
   <app-explore-tables></app-explore-tables>
 </mat-card>

@@ -12,7 +12,7 @@ export class PopupService {
 
   constructor(public dialog: MatDialog) { }
 
-// ouverture du popup (dialog) avec le contenu de la ligne en paramètre
+  // ouverture du popup (dialog) avec le contenu de la ligne en paramètre
   openEditVehicule(row): void {
     const dialogRef = this.dialog.open(PopupVehiculeComponent, {
       width: '500px',

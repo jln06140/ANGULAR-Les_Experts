@@ -12,12 +12,13 @@
         </article>
         <mat-card fxFlex='60' fxLayoutAlign="center center">PHOTO</mat-card>
       </div>
-     <!-- <h3 [ngStyle.xs]='title'>Affaire associées</h3>
-       <app-affaire-pieceOfEvidence></app-affaire-pieceOfEvidence> -->
+     <h3>Affaire associées</h3>
+       <app-table-pieceofevidence></app-table-pieceofevidence>
     </mat-card>
     <div  fxLayout="row" class="bouton" fxLayoutAlign="begin">
         <!-- options -->
         <button mat-raised-button class="couleurBoutonForm" routerLink="edit"><mat-icon>mode_edit</mat-icon>&nbsp;Editer</button>&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button class="couleurBoutonForm" (click)="delete()"><mat-icon>warning</mat-icon>&nbsp;Supprimer</button>&nbsp;&nbsp;&nbsp;
         <button mat-raised-button class="couleurBoutonForm" (click)="backToList()"><mat-icon>reply</mat-icon>&nbsp;Retour</button>
     </div>
   </div>

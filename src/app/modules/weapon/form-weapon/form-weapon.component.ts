@@ -22,14 +22,14 @@ export class FormWeaponComponent implements OnInit {
     const urlSegment = this.route.snapshot.url[0];
     // mode edit en fonction de l'URI
     if (urlSegment && urlSegment.path === 'edit') {
-      // récupération de l'ID du vehicule
+      // récupération de l'ID de l'arme
       const id = +this.route.parent.snapshot.paramMap.get('id');
-      // récupération de l'objet véhicule
+      // récupération de l'arme
       this.weaponService.getWeapon(id).subscribe(
         data => this.weapon = data);
       this.editing = true;
     } else {
-       // mode création
+      // mode création (formulaire vide)
       this.editing = false;
       this.weapon = {
         createDate: '',
@@ -40,19 +40,17 @@ export class FormWeaponComponent implements OnInit {
     }
   }
 
-  // création de l'arme
-  onSubmit(form: NgForm) {
+  // création ou modification de l'arme
+  onSubmit() {
     if (this.editing) {
+      // modification
       this.weaponService.updateWeapon(this.weapon).subscribe();
+      this.router.navigate(['../'], { relativeTo: this.route });
     } else {
+      // création
       this.weaponService.createWeapon(this.weapon).subscribe();
+      this.router.navigate(['../'], { relativeTo: this.route });
    }
-  }
-
-  onCreate() {
-    if (!this.editing) {
-      this.router.navigate(['/weapons']);
-    }
   }
 
 }

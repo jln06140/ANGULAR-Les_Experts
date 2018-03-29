@@ -10,12 +10,12 @@
           <p>Modèle : <b>{{vehicule?.model}}</b></p>
           <p>Couleur : <b>{{vehicule?.color}}</b></p>
           <p>Plaque d'immatriculation : <b>{{vehicule?.licensePlate}}</b></p>
-          <p>Date de création : <b>{{vehicule?.createDate| date: 'dd/MM/yyyy'}}</b></p>   
+          <p>Date de création : <b>{{vehicule?.createDate | date: 'dd/MM/yyyy'}}</b></p>   
         </article>
         <mat-card fxFlex='60' fxLayoutAlign="center center">PHOTO</mat-card>
       </div>
-     <!-- <h3 [ngStyle.xs]='title'>Affaire associées</h3>
-       <app-affaire-vehicule></app-affaire-vehicule> -->
+     <h3 [ngStyle.xs]='title'>Affaire associées</h3>
+       <app-table-vehicule></app-table-vehicule>
     </mat-card>
     <div  fxLayout="row" class="bouton" fxLayoutAlign="begin">
         <!-- options -->

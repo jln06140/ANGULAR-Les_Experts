@@ -46,15 +46,12 @@ export class FormPieceOfEvidenceComponent implements OnInit {
   onSubmit(form: NgForm) {
     if (this.editing) {
         this.pieceOfEvidenceService.updatePieceOfEvidence(this.pieceOfEvidence).subscribe();
+        this.router.navigate(['../'], { relativeTo: this.route });
     } else {
-    this.pieceOfEvidenceService.createPieceOfEvidence(this.pieceOfEvidence).subscribe();
+        this.pieceOfEvidenceService.createPieceOfEvidence(this.pieceOfEvidence).subscribe();
+        this.router.navigate(['../'], { relativeTo: this.route });
     }
   }
 
-  onCreate() {
-    if (!this.editing) {
-      this.router.navigate(['/pieceOfEvidence']);
-    }
-  }
 }
 

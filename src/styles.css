@@ -161,6 +161,11 @@ mat-toolbar {
     flex: 1;
 }
 
+.taillePoliceTitreTableau {
+    font-size: 16px !important;
+    color: white !important;
+}
+
 .titreAffaire {
     display: flex;
     text-align: left;
@@ -194,7 +199,7 @@ mat-toolbar {
 }
 
 .titreTableau {
-    background-color: #abadb3;
+    background-color: #1f5480;
 }
 
 .taillePoliceTitreTableau {

@@ -46,15 +46,12 @@ export class FormVehiculeComponent implements OnInit {
   onSubmit(form: NgForm) {
     if (this.editing) {
         this.vehiculeService.updateVehicule(this.vehicule).subscribe();
+        this.router.navigate(['../'], { relativeTo: this.route });
     } else {
-    this.vehiculeService.createVehicule(this.vehicule).subscribe();
+        this.vehiculeService.createVehicule(this.vehicule).subscribe();
+        this.router.navigate(['../'], { relativeTo: this.route });
     }
   }
 
-  onCreate() {
-    if (!this.editing) {
-      this.router.navigate(['/vehicules']);
-    }
-  }
 }
 

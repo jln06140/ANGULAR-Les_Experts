@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CaseService } from '../../../../core/api/case.service';
+import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 
 @Component({
   selector: 'app-message-affaire',
@@ -22,6 +24,7 @@ export interface Message {
   description: string;
   name: string;
 }
+
 
 // USER TESTING
 const generatedListMessageAffaire: Message[] = [
