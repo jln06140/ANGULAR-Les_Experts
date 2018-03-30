@@ -77,4 +77,4 @@ Personnellement, j'ai particulièrement travaillé sur la partie UML, design (mo
 		¤ table-weapons : contient ces 4 types de fichiers, permettant (grâce au .html
 		  et .ts) d'afficher le tableau complet des armes
     
-Pour démarrer l'application, il suffira d'entrer dans la console **ng serve**, puis de se connecter dans un navigateur à l'adresse **http://localhost:4200**
+Pour démarrer l'application, il suffira de se placer sur le dossier du projet, d'entrer dans la console de l'IDE **ng serve**, puis de se connecter, grâce à un navigateur, à l'adresse **http://localhost:4200**. Cela va permettre de visualiser le fonctionnement du projet de manière complète, mais en version locale.
