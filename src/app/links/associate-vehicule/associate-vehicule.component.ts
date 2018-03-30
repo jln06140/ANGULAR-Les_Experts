@@ -32,10 +32,9 @@ export class AssociateVehiculeComponent implements OnInit {
       listCase:  [], };
     }
 
-    onSubmit(vehicule: Vehicule) {
-      this.vehicule = vehicule;
-      this.policeCase.vehicule.push(this.vehicule);
-      this.caseService.updateCase(this.policeCase);
+    onSubmit(ngForm: NgForm) {
+      this.policeCase.vehicule.push(ngForm.value);
+      this.caseService.associateCaseItem(this.policeCase).subscribe();
       this.dialogRef.close();
     }
 }

@@ -25,7 +25,7 @@
     </ng-container>
     <ng-container matColumnDef="delete">
         <mat-header-cell *matHeaderCellDef fxHide.xs></mat-header-cell>
-        <mat-cell *matCellDef="let row" fxHide.xs><a (click)="dialogDeleteLink(row)"><i class="fas fa-unlink"></i></a></mat-cell>
+        <mat-cell *matCellDef="let row" fxHide.xs><a (click)="dialogDeleteLink(row)"><i class="fas fa-unlink icon"></i></a></mat-cell>
       </ng-container>
   <mat-header-row *matHeaderRowDef="pieceOfEvidenceColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: pieceOfEvidenceColumns"></mat-row>

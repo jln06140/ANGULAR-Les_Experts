@@ -37,3 +37,7 @@ h4 {
 .lastbutton {
     margin-right: 30px;
 }
+
+.mat-icon, .svg-inline--fa {
+    cursor: pointer;
+}

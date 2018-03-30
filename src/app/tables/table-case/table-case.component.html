@@ -4,7 +4,7 @@
   </mat-form-field>
   <mat-table [dataSource]="caseSource" matSort>
     <!-- Définition des lignes -->
-    <ng-container matColumDef="id">
+    <ng-container matColumnDef="id">
       <mat-header-cell *matHeaderCellDef mat-sort-header>Identifiant</mat-header-cell>
       <mat-cell *matCellDef="let row">{{row.id}}</mat-cell>
     </ng-container>
@@ -20,10 +20,6 @@
       <mat-header-cell *matHeaderCellDef fxHide.xs mat-sort-header>Description</mat-header-cell>
       <mat-cell *matCellDef="let row" fxHide.xs>{{row.description}}</mat-cell>
     </ng-container>
-    <ng-container matColumnDef="button">
-      <mat-header-cell *matHeaderCellDef mat-sort-header></mat-header-cell>
-      <mat-cell *matCellDef="let row"></mat-cell>
-    </ng-container>
     <!-- Définition des colonnes -->
     <mat-header-row *matHeaderRowDef="caseColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: caseColumns" routerLink="/affaires/{{row.id}}"></mat-row>
@@ -35,5 +31,8 @@
     [showFirstLastButtons]="true">
   </mat-paginator>
 </section>
+<div *ngIf='!caseSource' fxLayoutAlign='center center'>
+    <mat-spinner></mat-spinner>
+</div>
 
 

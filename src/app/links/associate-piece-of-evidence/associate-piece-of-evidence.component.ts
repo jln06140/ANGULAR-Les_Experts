@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { PieceOfEvidence } from '../../core/model';
+import { Component, OnInit, Input } from '@angular/core';
+import { PieceOfEvidence, Case } from '../../core/model';
 import { PopupAssociateComponent } from '../../popup/popup-associate/popup-associate.component';
 import { MatDialogRef } from '@angular/material';
 import { NgForm } from '@angular/forms';
@@ -14,6 +14,7 @@ import { CaseService } from '../../core/api/case.service';
 export class AssociatePieceOfEvidenceComponent implements OnInit {
   poe: PieceOfEvidence;
 
+  @Input() policeCase: Case;
   constructor(
     public dialogRef: MatDialogRef<PopupAssociateComponent>,
     private caseService: CaseService) {}
@@ -27,8 +28,8 @@ export class AssociatePieceOfEvidenceComponent implements OnInit {
     }
 
     onSubmit(ngForm: NgForm) {
-      // this.data.push(ngForm);
-      // this.caseService.updateCase(this.data);
+      this.policeCase.pieceOfEvidence.push(ngForm.value);
+      this.caseService.associateCaseItem(this.policeCase).subscribe();
       this.dialogRef.close();
     }
 }

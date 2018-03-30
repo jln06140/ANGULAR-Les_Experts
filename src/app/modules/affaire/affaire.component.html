@@ -3,23 +3,23 @@
     <!-- intitulé/description de l'affaire -->
   <mat-card fxFlex="40">
     <div class='bandeau' fxLayoutAlign='space-between center'>
-      <h4>Affaire : {{policeCase?.name}}</h4>
-      <div fxLayoutAlign="end stretch" fxLayoutGap="20px" *ngIf="!editing" class="lastbutton">
-        <button mat-raised-button color="accent" class="lastbutton" (click)='editCase()'>
-          <span matTooltip="Editer l'affaire">Editer</span>
-        </button>
-      </div>
-      <div fxLayoutAlign="end stretch" fxLayoutGap="20px" *ngIf="editing">
-        <button mat-raised-button color="accent" class="lastbutton">
-          <span matTooltip="Valider l'édition">Valider</span>
-        </button>
-        <div class="lastbutton">
-          <button mat-raised-button color="warn" (click)='editCase()'>
-            <span matTooltip="Annuler l'édition">Annuler</span>
+        <h4>Affaire : {{policeCase?.name}}</h4>
+        <div fxLayoutAlign="end stretch" fxLayoutGap="20px" *ngIf="!editing" class="lastbutton">
+          <button mat-raised-button color="accent" class="lastbutton" (click)='editCase()'>
+            <span matTooltip="Editer l'affaire">Editer</span>
           </button>
         </div>
+        <div fxLayoutAlign="end stretch" fxLayoutGap="20px" *ngIf="editing">
+          <button mat-raised-button color="accent" class="lastbutton">
+            <span matTooltip="Valider l'édition">Valider</span>
+          </button>
+          <div class="lastbutton">
+            <button mat-raised-button color="warn" (click)='editCase()'>
+              <span matTooltip="Annuler l'édition">Annuler</span>
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
     <mat-card *ngIf='!editing'>
       <p>Description:</p>
       <p>{{policeCase?.description}}</p>

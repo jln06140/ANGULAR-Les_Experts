@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PopupAssociateComponent } from '../../popup/popup-associate/popup-associate.component';
 import { MatDialogRef } from '@angular/material';
 import { NgForm } from '@angular/forms';
-import { Weapon } from '../../core/model';
+import { Weapon, Case } from '../../core/model';
+import { CaseService } from '../../core/api/case.service';
 
 
 @Component({
@@ -13,7 +14,10 @@ import { Weapon } from '../../core/model';
 export class AssociateWeaponComponent implements OnInit {
   weapon: Weapon;
 
-  constructor(public dialogRef: MatDialogRef<PopupAssociateComponent>) {}
+  @Input() policeCase: Case;
+  constructor(
+    public dialogRef: MatDialogRef<PopupAssociateComponent>,
+    private caseService: CaseService) {}
 
   ngOnInit() {
     this.weapon = {
@@ -24,7 +28,8 @@ export class AssociateWeaponComponent implements OnInit {
     }
 
     onSubmit(ngForm: NgForm) {
-      // this.affaire.onSubmit(ngForm, this.data);
+      this.policeCase.weapon.push(ngForm.value);
+      this.caseService.associateCaseItem(this.policeCase).subscribe();
       this.dialogRef.close();
     }
 }

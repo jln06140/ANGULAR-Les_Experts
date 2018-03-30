@@ -10,7 +10,7 @@ import {MatTableDataSource, MatPaginator, MatSort} from '@angular/material';
   styleUrls: ['./table-case.component.css']
 })
 export class TableCaseComponent implements OnInit {
-  caseColumns = ['date', 'name', 'description', 'button'];
+  caseColumns = ['id', 'name', 'description'];
   caseSource;
   errText: string;
 
