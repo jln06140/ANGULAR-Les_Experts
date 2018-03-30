@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Vehicule } from '../../../core/model';
 import { VehiculeService } from '../../../core/api/vehicule.service';
@@ -12,6 +12,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class FormVehiculeComponent implements OnInit {
   vehicule: Vehicule;
   editing: boolean;
+
+  @Input() v: Vehicule;
 
   constructor(private vehiculeService: VehiculeService,
     private route: ActivatedRoute,
@@ -27,6 +29,9 @@ export class FormVehiculeComponent implements OnInit {
       // récupération de l'objet véhicule
       this.vehiculeService.getVehicule(id).subscribe(
         data => this.vehicule = data);
+      this.editing = true;
+    } else if (this.v) {
+      this.vehicule = this.v;
       this.editing = true;
     } else {
       // mode création
@@ -48,12 +53,7 @@ export class FormVehiculeComponent implements OnInit {
         this.vehiculeService.updateVehicule(this.vehicule).subscribe();
     } else {
     this.vehiculeService.createVehicule(this.vehicule).subscribe();
-    }
-  }
-
-  onCreate() {
-    if (!this.editing) {
-      this.router.navigate(['/vehicules']);
+    this.router.navigate(['/vehicules']);
     }
   }
 }

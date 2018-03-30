@@ -28,7 +28,6 @@ export class TableVehiculesComponent implements OnInit {
         this.vehiculeSource.paginator = this.paginator;
         this.vehiculeSource.sort = this.sort;
          });
-
   }
 
   // filtre sur le tableau

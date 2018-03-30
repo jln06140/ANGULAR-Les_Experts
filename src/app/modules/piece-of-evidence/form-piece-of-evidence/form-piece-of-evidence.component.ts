@@ -48,12 +48,7 @@ export class FormPieceOfEvidenceComponent implements OnInit {
         this.pieceOfEvidenceService.updatePieceOfEvidence(this.pieceOfEvidence).subscribe();
     } else {
     this.pieceOfEvidenceService.createPieceOfEvidence(this.pieceOfEvidence).subscribe();
-    }
-  }
-
-  onCreate() {
-    if (!this.editing) {
-      this.router.navigate(['/pieceOfEvidence']);
+    this.router.navigate(['/pieceOfEvidence']);
     }
   }
 }

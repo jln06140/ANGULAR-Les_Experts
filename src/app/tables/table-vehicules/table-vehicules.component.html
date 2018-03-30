@@ -8,12 +8,9 @@
   </div>
 
 <!-- tableau -->
-<section>
-  <div fxLayout='row' fxLayoutAlign='space-between center'>
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtre">
   </mat-form-field>
-  </div>
   <mat-table [dataSource]="vehiculeSource" matSort  >
     <ng-container matColumnDef="id">
       <mat-header-cell *matHeaderCellDef fxHide.xs mat-sort-header>Identifiant</mat-header-cell>
@@ -53,4 +50,4 @@
                  [pageSizeOptions]="[5, 10, 20]"
                  [showFirstLastButtons]="true">
   </mat-paginator>
-</section>
+</mat-card>

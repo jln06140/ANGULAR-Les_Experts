@@ -46,13 +46,8 @@ export class FormWeaponComponent implements OnInit {
       this.weaponService.updateWeapon(this.weapon).subscribe();
     } else {
       this.weaponService.createWeapon(this.weapon).subscribe();
-   }
-  }
-
-  onCreate() {
-    if (!this.editing) {
       this.router.navigate(['/weapons']);
-    }
+   }
   }
 
 }

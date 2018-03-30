@@ -1,29 +1,19 @@
 <!-- Formulaire de création/édition de véhicule -->
-<mat-card>
+<mat-card *ngIf='policeCase'>
   <mat-toolbar class='bandeau' fxLayoutAlign="center center">{{editing ? 'Edition' : 'Création'}}</mat-toolbar>
   <form #vehiculeForm="ngForm"
     (ngSubmit)="onSubmit(vehiculeForm)"
     fxLayout="column" class="container">
     <mat-form-field>
       <input matInput type="text" required
-        placeholder="Marque" name="name"
-        [(ngModel)]="vehicule.marque">
+        placeholder="Name" name="name"
+        [(ngModel)]="policeCase.name">
     </mat-form-field>
     <mat-form-field>
       <input matInput type="text" required
-        placeholder="Modèle" name="model"
-        [(ngModel)]="vehicule.model">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput type="text" required
-        placeholder="Couleur" name="color"
-        [(ngModel)]="vehicule.color">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput type="text" required
-        placeholder="Plaque d'immatriculation" name="licensePlate"
-        [(ngModel)]="vehicule.licensePlate">
+        placeholder="Description" name="description"
+        [(ngModel)]="policeCase.description">
     </mat-form-field>
     <button mat-raised-button type="submit" [disabled]="!vehiculeForm.valid" color="accent">Envoyer</button>
   </form>
-  </mat-card>
+</mat-card>

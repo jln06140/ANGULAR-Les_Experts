@@ -17,7 +17,11 @@ export class TableVehiculeComponent implements OnInit {
   errText: string;
   vehiculeColumns = ['marque', 'model', 'color', 'licensePlate', 'createDate', 'updateDate', 'edit', 'delete'];
   policeCase: Case;
+  vehicule: Vehicule;
   vehiculeSource;
+  data: any;
+
+
   constructor(
     public popupService: PopupService,
     private route: ActivatedRoute,
@@ -32,12 +36,14 @@ export class TableVehiculeComponent implements OnInit {
       );
     }
 
+
 // ouverture du popup avec le contenu de la ligne en paramètre
   dialogEdit(row) {
     this.popupService.openEditVehicule(row);
   }
 
   dialogDeleteLink(row) {
-    this.popupService.openDLinkVehicule(row);
+    this. data = [this.id, row.id];
+    this.popupService.openDLinkVehicule(this.data);
   }
 }

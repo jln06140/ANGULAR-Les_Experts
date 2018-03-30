@@ -19,8 +19,7 @@ export class DetailVehiculeComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
      private vehiculeService: VehiculeService,
-     private router: Router,
-     private caseService: CaseService) {
+     private router: Router) {
    }
 
   ngOnInit() {

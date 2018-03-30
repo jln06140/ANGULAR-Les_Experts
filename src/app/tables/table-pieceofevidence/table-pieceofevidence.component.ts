@@ -12,7 +12,7 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./table-pieceofevidence.component.css']
 })
 export class TablePieceofevidenceComponent implements OnInit {
-  pieceOfEvidenceColumns = ['id', 'createDate', 'type', 'serialNumber'];
+  pieceOfEvidenceColumns = ['id', 'createDate', 'type', 'serialNumber', 'edit', 'delete'];
   pieceOfEvidenceSource;
 
 

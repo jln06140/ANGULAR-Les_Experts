@@ -13,11 +13,6 @@ import { TableCaseComponent } from './tables/table-case/table-case.component';
 import { TableWeaponComponent } from './tables/table-weapon/table-weapon.component';
 import { TableVehiculeComponent } from './tables/table-vehicule/table-vehicule.component';
 import { TablePieceofevidenceComponent } from './tables/table-pieceofevidence/table-pieceofevidence.component';
-import { TableWitnessComponent } from './tables/table-witness/table-witness.component';
-import { TableVictimComponent } from './tables/table-victim/table-victim.component';
-import { TableSuspectComponent } from './tables/table-suspect/table-suspect.component';
-import { PageAffaireComponent } from './modules/pages/page-affaire/page-affaire.component';
-import { ExploreTablesComponent } from './modules/pages/page-affaire/explore-tables/explore-tables.component';
 import { PopupVehiculeComponent } from './popup/popup-vehicule/popup-vehicule.component';
 import { PopupWeaponComponent } from './popup/popup-weapon/popup-weapon.component';
 import { PopupPieceofevidenceComponent } from './popup/popup-pieceofevidence/popup-pieceofevidence.component';
@@ -30,12 +25,9 @@ import { PieceOfEvidenceComponent } from './modules/piece-of-evidence/piece-of-e
 import { DetailPieceOfEvidenceComponent } from './modules/piece-of-evidence/detail-piece-of-evidence/detail-piece-of-evidence.component';
 import { FormPieceOfEvidenceComponent } from './modules/piece-of-evidence/form-piece-of-evidence/form-piece-of-evidence.component';
 import { TablePieceOfEvidenceComponent } from './tables/table-piece-of-evidence/table-piece-of-evidence.component';
-import { PopupAssociateComponent } from './modules/pages/page-affaire/popup-associate/popup-associate.component';
-import { AssociateVehiculeComponent } from './modules/pages/page-affaire/popup-associate/associate-vehicule/associate-vehicule.component';
 import { PopupService } from './core/popup.service';
 import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { NavigationComponent } from './core/navigation/navigation.component';
-import { MessageAffaireComponent } from './modules/pages/page-affaire/message-affaire/message-affaire.component';
 import { WeaponComponent } from './modules/weapon/weapon.component';
 import { DetailWeaponComponent } from './modules/weapon/detail-weapon/detail-weapon.component';
 import { FormWeaponComponent } from './modules/weapon/form-weapon/form-weapon.component';
@@ -44,10 +36,16 @@ import { CaseService } from './core/api/case.service';
 import { WeaponService } from './core/api/weapon.service';
 import { VehiculeService } from './core/api/vehicule.service';
 import { PoeService } from './core/api/poe.service';
-import { WitnessService } from './core/api/witness.service';
-import { SuspectService } from './core/api/suspect.service';
-import { VictimService } from './core/api/victim.service';
 import { CommentService } from './core/api/comment.service';
+import { AssociateWeaponComponent } from './links/associate-weapon/associate-weapon.component';
+import { AssociatePieceOfEvidenceComponent } from './links/associate-piece-of-evidence/associate-piece-of-evidence.component';
+import { AssociateVehiculeComponent } from './links/associate-vehicule/associate-vehicule.component';
+import { PopupCreateAssociateComponent } from './popup/popup-create-associate/popup-create-associate.component';
+import { PopupAssociateComponent } from './popup/popup-associate/popup-associate.component';
+import { AffaireComponent } from './modules/affaire/affaire.component';
+import { ExploreTablesComponent } from './modules/affaire/explore-tables/explore-tables.component';
+import { MessageAffaireComponent } from './modules/affaire/message-affaire/message-affaire.component';
+import { FormAffaireComponent } from './modules/affaire/form-affaire/form-affaire.component';
 
 
 
@@ -61,10 +59,6 @@ import { CommentService } from './core/api/comment.service';
     TableWeaponComponent,
     TableVehiculeComponent,
     TablePieceofevidenceComponent,
-    TableWitnessComponent,
-    TableVictimComponent,
-    TableSuspectComponent,
-    PageAffaireComponent,
     ExploreTablesComponent,
     PopupVehiculeComponent,
     PopupWeaponComponent,
@@ -78,7 +72,6 @@ import { CommentService } from './core/api/comment.service';
     DetailPieceOfEvidenceComponent,
     FormPieceOfEvidenceComponent,
     TablePieceOfEvidenceComponent,
-    PopupAssociateComponent,
     AssociateVehiculeComponent,
     DashboardComponent,
     NavigationComponent,
@@ -86,7 +79,13 @@ import { CommentService } from './core/api/comment.service';
     WeaponComponent,
     DetailWeaponComponent,
     FormWeaponComponent,
-    TableWeaponsComponent
+    TableWeaponsComponent,
+    FormAffaireComponent,
+    AssociateWeaponComponent,
+    AssociatePieceOfEvidenceComponent,
+    PopupCreateAssociateComponent,
+    PopupAssociateComponent,
+    AffaireComponent
   ],
   imports: [
     BrowserModule,
@@ -100,19 +99,20 @@ import { CommentService } from './core/api/comment.service';
   exports: [
     MaterialModule
   ],
-  entryComponents: [PopupVehiculeComponent, PopupDeleteLinkComponent, PopupAssociateComponent],
+  entryComponents: [
+    PopupVehiculeComponent,
+    PopupDeleteLinkComponent,
+    PopupAssociateComponent,
+    PopupCreateAssociateComponent],
   providers: [
     HttpClientModule,
-    PageAffaireComponent,
     PopupService,
     CaseService,
     WeaponService,
     VehiculeService,
     PoeService,
-    WitnessService,
-    SuspectService,
-    VictimService,
     CommentService,
+    AffaireComponent
   ],
   bootstrap: [AppComponent]
 })

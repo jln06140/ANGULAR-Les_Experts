@@ -1,10 +1,9 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { Case } from '../../core/model';
 import { Vehicule } from '../../core/model';
 import { VehiculeService } from '../../core/api/vehicule.service';
-import { ActivatedRoute } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { TableVehiculeComponent } from '../../tables/table-vehicule/table-vehicule.component';
 
 
 @Component({
@@ -13,18 +12,13 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./popup-delete-link.component.css']
 })
 export class PopupDeleteLinkComponent implements OnInit {
-  idCase;
+
 
   constructor(public dialogRef: MatDialogRef<PopupDeleteLinkComponent>,
     @Inject(MAT_DIALOG_DATA) public data,
-    private vehiculeService: VehiculeService,
-  private route: ActivatedRoute) { }
+    private vehiculeService: VehiculeService) { }
 
   ngOnInit() {
-    // this.idCase = +this.route.paramMap.subscribe(params => this.idCase = +params.get('id'));
-    // this.idCase = +this.route.snapshot
-    console.log(this.idCase);
-
   }
 
   close() {
@@ -32,8 +26,9 @@ export class PopupDeleteLinkComponent implements OnInit {
   }
 
   deleteLink() {
-    this.vehiculeService.deleteVehiculeLink(this.idCase, this.data).subscribe();
-    this.dialogRef.close();
+    this.vehiculeService.deleteVehiculeLink(this.data);
+    console.log(this.data);
+    close();
   }
 
 }

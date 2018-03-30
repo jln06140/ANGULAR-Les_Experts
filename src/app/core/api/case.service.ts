@@ -20,4 +20,7 @@ export class CaseService {
   getCase(id: number): Observable<Case> {
     return this.http.get<Case>(`${HOST}/case/${id}`);
   }
+  updateCase(c: Case): Observable<Case> {
+    return this.http.put<Case>(`${HOST}/case/${c.id}`, c);
+  }
 }

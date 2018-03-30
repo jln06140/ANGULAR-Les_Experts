@@ -20,8 +20,7 @@ export class PopupService {
     });
   }
 
-  openDLinkVehicule(id: number): void {
-    const dialogRef = this.dialog.open(PopupDeleteLinkComponent, {
-    data: id});
+  openDLinkVehicule(data): void {
+    const dialogRef = this.dialog.open(PopupDeleteLinkComponent, {data});
   }
 }

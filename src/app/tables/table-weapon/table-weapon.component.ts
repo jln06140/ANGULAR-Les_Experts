@@ -10,7 +10,7 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./table-weapon.component.css']
 })
 export class TableWeaponComponent implements OnInit {
-  weaponColumns = ['type', 'modele', 'createDate', 'updateDate'];
+  weaponColumns = ['type', 'modele', 'createDate', 'updateDate', 'edit', 'delete'];
   weaponSource;
   errText: string;
 
@@ -22,6 +22,14 @@ export class TableWeaponComponent implements OnInit {
       data => this.weaponSource = new MatTableDataSource(data.weapon),
       err => this.errText = 'La requête a échouée'
     );
+  }
+  // ouverture du popup avec le contenu de la ligne en paramètre
+  dialogEdit(row) {
+    // this.popupService.openEditVehicule(row);
+  }
+
+  dialogDeleteLink(row) {
+    // this.popupService.openDLinkVehicule(row);
   }
 
 }

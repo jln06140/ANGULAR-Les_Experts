@@ -19,6 +19,14 @@
     <mat-header-cell *matHeaderCellDef>Dernière mise à jour</mat-header-cell>
     <mat-cell *matCellDef="let row">{{row.updateDate | date: 'dd-MM-yyyy'}}</mat-cell>
   </ng-container>
+  <ng-container matColumnDef="edit">
+      <mat-header-cell *matHeaderCellDef fxHide.xs></mat-header-cell>
+      <mat-cell *matCellDef="let row" fxHide.xs><a (click)="dialogEdit(row)"><mat-icon>mode_edit</mat-icon></a></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="delete">
+        <mat-header-cell *matHeaderCellDef fxHide.xs></mat-header-cell>
+        <mat-cell *matCellDef="let row" fxHide.xs><a (click)="dialogDeleteLink(row)"><i class="fas fa-unlink"></i></a></mat-cell>
+      </ng-container>
   <mat-header-row *matHeaderRowDef="pieceOfEvidenceColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: pieceOfEvidenceColumns"></mat-row>
 </mat-table>

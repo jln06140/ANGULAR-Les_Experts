@@ -31,7 +31,7 @@ export class VehiculeService {
     return this.http.delete<Vehicule>(`${HOST}/vehicule/${id}`);
   }
 
-  deleteVehiculeLink(idCase: number, idVehicule: number): Observable<any> {
-    return this.http.delete<any>(`${HOST}/linkVehicule/${idCase}/${idVehicule}`);
+  deleteVehiculeLink(data): Observable<any> {
+    return this.http.delete<any>(`${HOST}/linkVehicule/${data[0]}/${data[1]}`);
   }
 }
