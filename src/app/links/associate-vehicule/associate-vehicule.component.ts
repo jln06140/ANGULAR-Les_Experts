@@ -34,8 +34,8 @@ export class AssociateVehiculeComponent implements OnInit {
 
     onSubmit(vehicule: Vehicule) {
       this.vehicule = vehicule;
-      this.policeCase.push(this.vehicule);
-      this.caseService.updateCase(this.childPoliceCase);
+      this.policeCase.vehicule.push(this.vehicule);
+      this.caseService.updateCase(this.policeCase);
       this.dialogRef.close();
     }
 }

@@ -37,7 +37,15 @@ export class PopupAssociateComponent implements OnInit {
       data => this.convictions = data);
   }
 
-  associate(item) {
+  associatePoe(item) {
+    this.data.push(item);
+    this.caseService.updateCase(this.data);
+  }
+  associateWeapon(item) {
+    this.data.push(item);
+    this.caseService.updateCase(this.data);
+  }
+  associateVehicule(item) {
     this.data.push(item);
     this.caseService.updateCase(this.data);
   }

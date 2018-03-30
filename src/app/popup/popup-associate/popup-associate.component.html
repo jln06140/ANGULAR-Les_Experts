@@ -20,7 +20,7 @@
         <mat-divider></mat-divider>
         <p>Marque: {{selectedPieceOfEvidence?.type}}</p>
         <p>Modèle: {{selectedPieceOfEvidence?.serialNumber}}</p>
-        <button mat-raised-button color="accent" fxLayoutAlign='center center' (click)='associate(selectedPieceOfEvidence)'>Associer</button>
+        <button mat-raised-button color="accent" fxLayoutAlign='center center' (click)='associatePoe(selectedPieceOfEvidence)'>Associer</button>
   </ng-container>
   <ng-container *ngSwitchCase="'Armes'">
     <mat-form-field>
@@ -34,7 +34,7 @@
     <mat-divider></mat-divider>
     <p>Marque: {{selectedWeapon?.type}}</p>
     <p>Modèle: {{selectedWeapon?.modele}}</p>
-    <button mat-raised-button color="accent" fxLayoutAlign='center center'(click)='associate(selectedWeapon)'>Associer</button>
+    <button mat-raised-button color="accent" fxLayoutAlign='center center'(click)='associateWeapon(selectedWeapon)'>Associer</button>
   </ng-container>
   <ng-container *ngSwitchCase="'Véhicules'">
     <mat-form-field>
@@ -50,6 +50,6 @@
     <p>Modèle: {{selectedVehicule?.model}}</p>
     <p>Couleur: {{selectedVehicule?.color}}</p>
     <p>Immatriculation : {{selectedVehicule?.licensePlate}}</p>
-    <button mat-raised-button color="accent" fxLayoutAlign='center center' (click)='associate(selectedVehicule)'>Associer</button>
+    <button mat-raised-button color="accent" fxLayoutAlign='center center' (click)='associateVehicule(selectedVehicule)'>Associer</button>
   </ng-container>
 </div>
