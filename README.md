@@ -70,8 +70,8 @@ Personnellement, j'ai particulièrement travaillé sur la partie UML, design (mo
     => composants "classique" : typiquement composés de 4 fichiers :
     
   		~ .html : architecture du composant
-	    ~ .css : habillage du composant (souvent remplacé par le style.css à la racine)
-	    ~ .ts : contient les méthodes et liens avec les autres composants
+	     ~ .css : habillage du composant (souvent remplacé par le style.css à la racine)
+  	    ~ .ts : contient les méthodes et liens avec les autres composants
  		~ .spec.ts : utilisé pour tester le module
 
 		¤ table-weapons : contient ces 4 types de fichiers, permettant (grâce au .html
