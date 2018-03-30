@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material';
+import { Case } from '../../core/model';
 
 @Component({
   selector: 'app-popup-create-associate',
@@ -8,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class PopupCreateAssociateComponent implements OnInit {
   sections = ['Pièces à conviction', 'Armes', 'Véhicules'];
   selectedCreate;
+  policeCase: Case;
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.policeCase = this.data;
+   }
 
 }

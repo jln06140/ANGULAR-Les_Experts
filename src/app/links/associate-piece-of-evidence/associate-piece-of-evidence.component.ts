@@ -3,6 +3,7 @@ import { PieceOfEvidence } from '../../core/model';
 import { PopupAssociateComponent } from '../../popup/popup-associate/popup-associate.component';
 import { MatDialogRef } from '@angular/material';
 import { NgForm } from '@angular/forms';
+import { CaseService } from '../../core/api/case.service';
 
 
 @Component({
@@ -13,7 +14,9 @@ import { NgForm } from '@angular/forms';
 export class AssociatePieceOfEvidenceComponent implements OnInit {
   poe: PieceOfEvidence;
 
-  constructor(public dialogRef: MatDialogRef<PopupAssociateComponent>) {}
+  constructor(
+    public dialogRef: MatDialogRef<PopupAssociateComponent>,
+    private caseService: CaseService) {}
 
   ngOnInit() {
     this.poe = {
@@ -24,6 +27,8 @@ export class AssociatePieceOfEvidenceComponent implements OnInit {
     }
 
     onSubmit(ngForm: NgForm) {
+      // this.data.push(ngForm);
+      // this.caseService.updateCase(this.data);
       this.dialogRef.close();
     }
 }

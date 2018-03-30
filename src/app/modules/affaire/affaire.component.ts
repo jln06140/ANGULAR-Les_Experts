@@ -36,9 +36,13 @@ export class AffaireComponent implements OnInit {
     this.editing = !this.editing;
   }
   openAssociate() {
-    const dialogRef = this.dialog.open(PopupAssociateComponent);
+    const dialogRef = this.dialog.open(PopupAssociateComponent, {
+      data: this.policeCase,
+    });
   }
   openCreateAssociate() {
-    const dialogRef = this.dialog.open(PopupCreateAssociateComponent);
+    const dialogRef = this.dialog.open(PopupCreateAssociateComponent, {
+      data: this.policeCase,
+    });
   }
 }

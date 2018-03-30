@@ -4,18 +4,20 @@
   <mat-card fxFlex="40">
     <div class='bandeau' fxLayoutAlign='space-between center'>
       <h4>Affaire : {{policeCase?.name}}</h4>
-      <div fxLayoutAlign="end stretch" fxLayoutGap="20px" *ngIf="!editing">
+      <div fxLayoutAlign="end stretch" fxLayoutGap="20px" *ngIf="!editing" class="lastbutton">
         <button mat-raised-button color="accent" class="lastbutton" (click)='editCase()'>
           <span matTooltip="Editer l'affaire">Editer</span>
         </button>
       </div>
       <div fxLayoutAlign="end stretch" fxLayoutGap="20px" *ngIf="editing">
         <button mat-raised-button color="accent" class="lastbutton">
-          <span matTooltip="Editer l'affaire">Valider</span>
+          <span matTooltip="Valider l'édition">Valider</span>
         </button>
-        <button mat-raised-button color="warn" class="lastbutton" (click)='editCase()'>
-          <span matTooltip="Editer l'affaire">Annuler</span>
-        </button>
+        <div class="lastbutton">
+          <button mat-raised-button color="warn" (click)='editCase()'>
+            <span matTooltip="Annuler l'édition">Annuler</span>
+          </button>
+        </div>
       </div>
     </div>
     <mat-card *ngIf='!editing'>
@@ -41,9 +43,11 @@
         <button mat-raised-button color="accent">
           <span matTooltip="Associer un élément existant" (click)='openAssociate()'>Associer</span>
         </button>
-        <button mat-raised-button color="accent" (click)="openCreateAssociate()" class="lastbutton">
-          <span matTooltip="Créer & Associer un nouvel élément">Créer & Associer</span>
-        </button>
+        <div class="lastbutton">
+          <button mat-raised-button color="accent" (click)="openCreateAssociate()">
+            <span matTooltip="Créer & Associer un nouvel élément">Créer & Associer</span>
+          </button>
+        </div>
       </div>
   </div>
     <!-- Sections -->

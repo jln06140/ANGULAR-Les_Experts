@@ -26,9 +26,8 @@ export class PopupDeleteLinkComponent implements OnInit {
   }
 
   deleteLink() {
-    this.vehiculeService.deleteVehiculeLink(this.data);
-    console.log(this.data);
-    close();
+    this.vehiculeService.deleteVehiculeLink(this.data).subscribe();
+    this.close();
   }
 
 }

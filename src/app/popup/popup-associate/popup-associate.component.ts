@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { PoeService } from '../../core/api/poe.service';
 import { VehiculeService } from '../../core/api/vehicule.service';
 import { WeaponService } from '../../core/api/weapon.service';
 import { Vehicule, Weapon, PieceOfEvidence } from '../../core/model';
+import { CaseService } from '../../core/api/case.service';
+import { MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-popup-associate',
@@ -22,7 +24,9 @@ export class PopupAssociateComponent implements OnInit {
   constructor(
     private vehiculeService: VehiculeService,
     private weaponService: WeaponService,
-    private poeService: PoeService) { }
+    private poeService: PoeService,
+    private caseService: CaseService,
+    @Inject(MAT_DIALOG_DATA) public data) { }
 
   ngOnInit() {
     this.vehiculeService.getVehicules().subscribe(
@@ -33,8 +37,9 @@ export class PopupAssociateComponent implements OnInit {
       data => this.convictions = data);
   }
 
-  associate(data) {
-    // this.caseService.associate(data);
+  associate(item) {
+    this.data.push(item);
+    this.caseService.updateCase(this.data);
   }
 
 
