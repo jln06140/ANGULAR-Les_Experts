@@ -26,7 +26,7 @@ Mode opératoire :
 
 ----------
 
-Personnellement, j'ai particulièrement travaillé sur la partie UML, design (mokup, CSS) et "arme" du projet.
+Personnellement, j'ai particulièrement travaillé sur la partie UML, design (mokup, CSS) et "armes" du projet.
 
 
 **Créer la partie front de l'application** :
