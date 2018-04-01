@@ -44,18 +44,27 @@ I realize the full front-end apart the following sections :
 
 ## Known issues
 
-Proccess to edit an existing 'affaire' :
+### Process to edit an existing 'affaire' :
 
 * Select an affaire from the 'Tableau de bord' page
 * Click on the 'Editer' button to display a form
 * Change the values
 * Click on 'Envoyer' to save the changes
 
-#### The 'Valider' button doesn't work
-#### the 'Annuler' button just hides the form to display back the description of the 'affaire'
-#### Hitting the 'Annuler' buton after sending the changes with the 'Envoyer' button doesn't cancel the changes.
+##### The 'Valider' button doesn't work
+##### the 'Annuler' button just hides the form to display back the description of the 'affaire'
+##### Hitting the 'Annuler' buton after sending the changes with the 'Envoyer' button doesn't cancel the changes.
 
 
+### Tables displayed dynamically
+
+The edition / delete of elements from a table isn't effective dynamically and require to refresh the page to be displayed
+
+
+### Messagerie
+
+Functionnality on the todo list.
+The goal is to keep track of interactions on police cases (creation, association, changes).
 
 
 ## Unit tests
@@ -72,11 +81,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## V2
 
-### Ajouter des colonnes visibles en mode portable paysage
-### ajouter les fonctions dela messagerie dans la création/édition
-### gérer les droits différentiels
-### créer la section administration
-### proposer un dashboard de charts pour le chef de police
-### gérer les notifications liées à la messagerie
-### sidenav en mode over en responsive
+### Responsive
+#### the sidenav has to be hidden by default
+#### reduction of the columns being displayed on landscape mode
+
+### Messagerie
+
+### Administration
+
 
