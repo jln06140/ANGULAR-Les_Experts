@@ -19,17 +19,16 @@ export class AssociateWeaponComponent implements OnInit {
     public dialogRef: MatDialogRef<PopupAssociateComponent>,
     private caseService: CaseService) {}
 
+  // initialize an empty weapon
   ngOnInit() {
     this.weapon = {
       type: '',
-      modele: '',
-      createDate: null,
-      updateDate: null };
+      modele: ''};
     }
 
     onSubmit(ngForm: NgForm) {
-      this.policeCase.weapon.push(ngForm.value);
-      this.caseService.associateCaseItem(this.policeCase).subscribe();
+      this.policeCase.weapon.push(ngForm.value); // push the new weapon into the policeCase object
+      this.caseService.associateCaseItem(this.policeCase).subscribe(); // post request method
       this.dialogRef.close();
     }
 }

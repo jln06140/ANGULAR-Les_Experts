@@ -3,9 +3,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { PopupDeleteLinkComponent } from './popup-delete-link.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatDialogRef, MatDialogModule, MAT_DIALOG_DATA } from '@angular/material';
-import { VehiculeService } from '../../../controller/vehicule.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { VehiculeService } from '../../core/api/vehicule.service';
 
 describe('PopupDeleteLinkComponent', () => {
   let component: PopupDeleteLinkComponent;

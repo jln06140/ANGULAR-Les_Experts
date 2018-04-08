@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { map, delay, tap } from 'rxjs/operators';
-import { Case, Vehicule } from '../model';
+import { Case, Vehicule, PoliceCaseVehicule } from '../model';
 
-const HOST = 'http://localhost:8080/api';
+export const HOST = 'http://localhost:8080/api';
 
 @Injectable()
 export class VehiculeService {
@@ -15,12 +15,20 @@ export class VehiculeService {
   getVehicules(): Observable<Vehicule[]> {
     return this.http.get<Vehicule[]>(`${HOST}/vehicule`);
   }
+
+  getPoliceCaseVehicules(id: number): Observable<Vehicule[]> {
+    return this.http.get<Vehicule[]>(`${HOST}/vehicule/policecase/` + id);
+  }
   getVehicule(id: number): Observable<Vehicule> {
     return this.http.get<Vehicule>(`${HOST}/vehicule/` + id);
   }
 
   createVehicule(vehicule: Vehicule): Observable<Vehicule> {
     return this.http.post<Vehicule>(`${HOST}/vehicule`, vehicule);
+  }
+
+  associateVehicule(policeCaseVehicule: PoliceCaseVehicule, idPoliceCase: number, idVehicule: number): Observable<any> {
+    return this.http.post<any>(`${HOST}/associatevehicule/${idPoliceCase}/${idVehicule}`, policeCaseVehicule);
   }
 
   updateVehicule(vehicule: Vehicule): Observable<Vehicule> {

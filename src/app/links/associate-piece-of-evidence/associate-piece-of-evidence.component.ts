@@ -19,17 +19,16 @@ export class AssociatePieceOfEvidenceComponent implements OnInit {
     public dialogRef: MatDialogRef<PopupAssociateComponent>,
     private caseService: CaseService) {}
 
+  // initialize an empty piece of evidence
   ngOnInit() {
     this.poe = {
-      createDate: null,
-    updateDate: null,
     type: '',
     serialNumber: '' };
     }
 
     onSubmit(ngForm: NgForm) {
-      this.policeCase.pieceOfEvidence.push(ngForm.value);
-      this.caseService.associateCaseItem(this.policeCase).subscribe();
+      this.policeCase.pieceOfEvidence.push(ngForm.value); // push the new piece of evidence into the policeCase object
+      this.caseService.associateCaseItem(this.policeCase).subscribe(); // post request method
       this.dialogRef.close();
     }
 }

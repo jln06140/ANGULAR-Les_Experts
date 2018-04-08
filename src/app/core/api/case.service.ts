@@ -23,6 +23,8 @@ export class CaseService {
   updateCase(c: Case): Observable<Case> {
     return this.http.put<Case>(`${HOST}/case/${c.id}`, c);
   }
+
+  // to associate an item (vehicule/weapon/piece of evidence) to a policeCase
   associateCaseItem(c: Case): Observable<Case> {
     return this.http.post<Case>(`${HOST}/case`, c);
   }

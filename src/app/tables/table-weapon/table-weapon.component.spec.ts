@@ -4,8 +4,8 @@ import { TableWeaponComponent } from './table-weapon.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatTableModule } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
-import { CaseService } from '../../../controller/case.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CaseService } from '../../core/api/case.service';
 
 describe('TableWeaponComponent', () => {
   let component: TableWeaponComponent;

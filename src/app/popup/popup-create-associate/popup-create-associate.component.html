@@ -1,13 +1,13 @@
 <p fxLayoutAlign='center'>Créer & Associer</p>
 <mat-divider></mat-divider>
-<mat-form-field>
+<mat-form-field> <!-- sélection d'une section -->
   <mat-select placeholder="Section" [(ngModel)]="selectedCreate" #sectionCreate (click)="sectionCreate.close()">
     <mat-option *ngFor="let sectionCreate of sections" [value]="sectionCreate">
       {{ sectionCreate }}
     </mat-option>
   </mat-select>
 </mat-form-field>
-<div [(ngSwitch)]="selectedCreate">
+<div [(ngSwitch)]="selectedCreate"> <!-- affichage du formulaire selon la section sélectionnée -->
   <ng-container *ngSwitchCase="'Armes'">
     <app-associate-weapon></app-associate-weapon>
   </ng-container>

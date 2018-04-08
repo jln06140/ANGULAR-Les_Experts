@@ -23,7 +23,7 @@ export class AffaireComponent implements OnInit {
     public dialog: MatDialog
   ) { }
 
-
+  // récupération de l'affaire grâce à l'id dans l'url
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.caseService.getCase(id).subscribe(
@@ -32,6 +32,7 @@ export class AffaireComponent implements OnInit {
     );
   }
 
+  // permet le switch du DOM entre l'édition de l'affaire et l'affichage de la description de l'affaire
   editCase() {
     this.editing = !this.editing;
   }

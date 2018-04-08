@@ -14,6 +14,7 @@ export class PopupCreateAssociateComponent implements OnInit {
 
   constructor(@Inject(MAT_DIALOG_DATA) public data) { }
 
+  // récupération de l'objet policeCase via le dialog
   ngOnInit() {
     this.policeCase = this.data;
    }

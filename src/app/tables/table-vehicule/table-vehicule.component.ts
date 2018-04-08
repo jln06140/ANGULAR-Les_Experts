@@ -15,7 +15,7 @@ import { Case } from '../../core/model';
 export class TableVehiculeComponent implements OnInit {
   id: number;
   errText: string;
-  vehiculeColumns = ['marque', 'model', 'color', 'licensePlate', 'createDate', 'updateDate', 'edit', 'delete'];
+  vehiculeColumns = ['marque', 'model', 'color', 'licensePlate', 'edit', 'delete'];
   policeCase: Case;
   vehicule: Vehicule;
   vehiculeSource;
@@ -25,13 +25,12 @@ export class TableVehiculeComponent implements OnInit {
   constructor(
     public popupService: PopupService,
     private route: ActivatedRoute,
-    private vehiculeService: VehiculeService,
-  private caseService: CaseService) { }
+    private vehiculeService: VehiculeService) { }
 
   ngOnInit() {
     this.id = +this.route.snapshot.paramMap.get('id');
-      this.caseService.getCase(this.id).subscribe(
-        data => this.vehiculeSource = new MatTableDataSource(data.vehicule),
+      this.vehiculeService.getPoliceCaseVehicules(this.id).subscribe(
+        data => this.vehiculeSource = new MatTableDataSource(data),
         err => this.errText = 'la requête a échouée'
       );
     }

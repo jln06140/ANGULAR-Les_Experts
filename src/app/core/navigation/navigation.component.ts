@@ -10,7 +10,10 @@ export class NavigationComponent implements OnInit {
 
   constructor() { }
 
+  // import #sidenav to use his methods
   @ViewChild('sidenav') private sidenav: MatSidenav;
+
+  // open the sidenav on initialization
   ngOnInit() {
     this.sidenav.open();
   }

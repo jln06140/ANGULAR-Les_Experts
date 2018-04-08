@@ -10,7 +10,7 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./table-weapon.component.css']
 })
 export class TableWeaponComponent implements OnInit {
-  weaponColumns = ['type', 'modele', 'createDate', 'updateDate', 'edit', 'delete'];
+  weaponColumns = ['type', 'modele', 'edit', 'delete'];
   weaponSource;
   errText: string;
 

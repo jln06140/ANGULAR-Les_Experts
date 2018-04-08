@@ -32,10 +32,8 @@ export class FormWeaponComponent implements OnInit {
        // mode création
       this.editing = false;
       this.weapon = {
-        createDate: '',
         type: '',
-        modele: '',
-        updateDate: '',
+        modele: ''
       };
     }
   }

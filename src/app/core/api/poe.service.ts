@@ -14,22 +14,26 @@ export class PoeService {
   constructor(private http: HttpClient) { }
 
   getPieceOfEvidences(): Observable<PieceOfEvidence[]> {
-    return this.http.get<PieceOfEvidence[]>(`${HOST}/pieceofevidence`);
+    return this.http.get<PieceOfEvidence[]>(`${HOST}/poe`);
   }
   getPieceOfEvidence(id: number): Observable<PieceOfEvidence> {
-    return this.http.get<PieceOfEvidence>(`${HOST}/pieceofevidence/` + id);
+    return this.http.get<PieceOfEvidence>(`${HOST}/poe/` + id);
+  }
+
+  getPieceOfEvidencePoliceCase(id: number): Observable<PieceOfEvidence[]> {
+    return this.http.get<PieceOfEvidence[]>(`${HOST}/poe/policecase/` + id);
   }
 
   createPieceOfEvidence(pieceOfEvidence: PieceOfEvidence): Observable<PieceOfEvidence> {
-    return this.http.post<PieceOfEvidence>(`${HOST}/pieceofevidence`, pieceOfEvidence);
+    return this.http.post<PieceOfEvidence>(`${HOST}/poe`, pieceOfEvidence);
   }
 
   updatePieceOfEvidence(pieceOfEvidence: PieceOfEvidence): Observable<PieceOfEvidence> {
-    return this.http.put<PieceOfEvidence>(`${HOST}/pieceofevidence/${pieceOfEvidence.id}`, pieceOfEvidence);
+    return this.http.put<PieceOfEvidence>(`${HOST}/poe/${pieceOfEvidence.id}`, pieceOfEvidence);
   }
 
   deletePieceOfEvidence(id: number): Observable<PieceOfEvidence> {
-    return this.http.delete<PieceOfEvidence>(`${HOST}/pieceofevidence/${id}`);
+    return this.http.delete<PieceOfEvidence>(`${HOST}/poe/${id}`);
   }
 
   deletePieceOfEvidenceLink(idCase: number, idPieceOfEvidence: number): Observable<any> {

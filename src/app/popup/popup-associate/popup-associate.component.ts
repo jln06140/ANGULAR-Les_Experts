@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { PoeService } from '../../core/api/poe.service';
 import { VehiculeService } from '../../core/api/vehicule.service';
 import { WeaponService } from '../../core/api/weapon.service';
-import { Vehicule, Weapon, PieceOfEvidence, Case } from '../../core/model';
+import { Vehicule, Weapon, PieceOfEvidence, Case, PoliceCaseVehicule } from '../../core/model';
 import { CaseService } from '../../core/api/case.service';
 import { MAT_DIALOG_DATA } from '@angular/material';
 
@@ -13,10 +13,10 @@ import { MAT_DIALOG_DATA } from '@angular/material';
 })
 export class PopupAssociateComponent implements OnInit {
   sections = ['Pièces à conviction', 'Armes', 'Véhicules'];
-  selectedSection;
-  selectedPieceOfEvidence;
-  selectedWeapon;
-  selectedVehicule;
+  selectedSection: string;
+  selectedPieceOfEvidence: PieceOfEvidence;
+  selectedWeapon: Weapon;
+  selectedVehicule: Vehicule;
   vehicules: Vehicule[];
   weapons: Weapon[];
   convictions: PieceOfEvidence[];
@@ -29,6 +29,7 @@ export class PopupAssociateComponent implements OnInit {
     private caseService: CaseService,
     @Inject(MAT_DIALOG_DATA) public data) { }
 
+  // appel de l'API pour récupération des tables
   ngOnInit() {
     this.vehiculeService.getVehicules().subscribe(
       data => this.vehicules = data);
@@ -47,9 +48,15 @@ export class PopupAssociateComponent implements OnInit {
     this.policeCase.weapon.push(item);
     this.caseService.associateCaseItem(this.policeCase).subscribe();
   }
-  associateVehicule(item) {
-    this.policeCase.vehicule.push(item);
-    this.caseService.associateCaseItem(this.policeCase).subscribe();
+  associateVehicule(vehicule: Vehicule) {
+    const idVehicule: number = vehicule.id;
+    const idCase: number = this.policeCase.id;
+    const policeCaseVehicule: PoliceCaseVehicule = {idCase, idVehicule};
+    this.vehiculeService.associateVehicule(policeCaseVehicule, idCase, idVehicule);
+    console.log(policeCaseVehicule);
+
+    // this.policeCase.vehicule.push(item);
+    // this.caseService.associateCaseItem(this.policeCase).subscribe();
   }
 
 

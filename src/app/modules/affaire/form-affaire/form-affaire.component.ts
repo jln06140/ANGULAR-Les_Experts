@@ -22,13 +22,11 @@ export class FormAffaireComponent implements OnInit {
   ngOnInit() {
     // récupération du path
     const urlSegment = this.route.snapshot.url[0];
-    console.log(urlSegment.path);
     // mode edit en fonction de l'uri
     if (urlSegment && urlSegment.path === 'affaires') {
       this.editing = true;
       // récupération de l'ID du vehicule
       const id = +this.route.snapshot.paramMap.get('id');
-      console.log(id);
       // récupération de l'objet véhicule
       this.caseService.getCase(id).subscribe(
         data => this.policeCase = data);
@@ -36,24 +34,16 @@ export class FormAffaireComponent implements OnInit {
       // mode création
       this.editing = false;
       this.policeCase = {
-        date: null,
         name: '',
         description: '',
-        listComment: [],
-        listUser: [],
-        listPhoto: [],
         pieceOfEvidence: [],
-        listVictim: [],
-        listSuspect: [],
-        listWitness: [],
         weapon: [],
         vehicule: [],
-        listTag: [],
       };
     }
   }
 
-  // création du véhicule
+  // méthodes création / édition
   onSubmit(form: NgForm) {
     if (this.editing) {
         this.caseService.updateCase(this.policeCase).subscribe();

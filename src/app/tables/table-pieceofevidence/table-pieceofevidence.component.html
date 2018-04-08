@@ -1,7 +1,7 @@
 <mat-table [dataSource]="pieceOfEvidenceSource">
   <ng-container matColumnDef="id">
-    <mat-header-cell *matHeaderCellDef>Idenftifiant</mat-header-cell>
-    <mat-cell *matCellDef="let row"></mat-cell>
+    <mat-header-cell *matHeaderCellDef>Identifiant</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.id}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="type">
     <mat-header-cell *matHeaderCellDef fxHide.xs>Type</mat-header-cell>

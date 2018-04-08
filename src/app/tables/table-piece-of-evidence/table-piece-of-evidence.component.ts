@@ -10,7 +10,7 @@ import {MatTableDataSource, MatPaginator} from '@angular/material';
 export class TablePieceOfEvidenceComponent implements OnInit {
 
  // tableau des colonnes dutableau affichées
- pieceOfEvidenceColumns = ['date', 'type', 'serialNumber', 'updateDate'];
+ pieceOfEvidenceColumns = ['id', 'type', 'serialNumber'];
  // source des informations envoyées dans le tableau
  pieceOfEvidenceSource;
  errText: string;

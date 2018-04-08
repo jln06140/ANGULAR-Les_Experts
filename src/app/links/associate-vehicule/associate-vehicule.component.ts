@@ -5,9 +5,6 @@ import { MatDialogRef } from '@angular/material';
 import { PopupAssociateComponent } from '../../popup/popup-associate/popup-associate.component';
 import { CaseService } from '../../core/api/case.service';
 
-
-
-
 @Component({
   selector: 'app-associate-vehicule',
   templateUrl: './associate-vehicule.component.html',
@@ -21,20 +18,18 @@ export class AssociateVehiculeComponent implements OnInit {
     public dialogRef: MatDialogRef<PopupAssociateComponent>,
     private caseService: CaseService) {}
 
+    // initialize an empty vehicule object
   ngOnInit() {
     this.vehicule = {
       model: '',
       marque: '',
       color: '',
-      licensePlate: '',
-      createDate: null,
-      updateDate: null,
-      listCase:  [], };
+      licensePlate: ''};
     }
 
     onSubmit(ngForm: NgForm) {
-      this.policeCase.vehicule.push(ngForm.value);
-      this.caseService.associateCaseItem(this.policeCase).subscribe();
+      this.policeCase.vehicule.push(ngForm.value); // push the new vehicule into the policeCase Object
+      this.caseService.associateCaseItem(this.policeCase).subscribe(); // post request method
       this.dialogRef.close();
     }
 }

@@ -5,22 +5,24 @@
     (ngSubmit)="onSubmit(vehiculeForm)"
     fxLayout="column" class="container">
     <mat-form-field>
-      <input matInput type="text" required
+      <input matInput type="text" 
         placeholder="Marque" name="name"
+        pattern=".{4,}"
         [(ngModel)]="vehicule.marque">
     </mat-form-field>
     <mat-form-field>
-      <input matInput type="text" required
+      <input matInput type="text" 
         placeholder="Modèle" name="model"
         [(ngModel)]="vehicule.model">
     </mat-form-field>
     <mat-form-field>
-      <input matInput type="text" required
+      <input matInput type="text" 
         placeholder="Couleur" name="color"
+        pattern=".{3,}"
         [(ngModel)]="vehicule.color">
     </mat-form-field>
     <mat-form-field>
-      <input matInput type="text" required
+      <input matInput type="text" 
         placeholder="Plaque d'immatriculation" name="licensePlate"
         [(ngModel)]="vehicule.licensePlate">
     </mat-form-field>

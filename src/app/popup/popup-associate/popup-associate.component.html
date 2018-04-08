@@ -1,13 +1,14 @@
 <p fxLayoutAlign='center'>Associer</p>
 <mat-divider></mat-divider>
-<mat-form-field>
+<mat-form-field> <!-- sélection de la section -->
   <mat-select placeholder="Section" [(ngModel)]="selectedSection" #sectionAssociate>
     <mat-option *ngFor="let sectionAssociate of sections" [value]="sectionAssociate">
       {{ sectionAssociate }}
     </mat-option>
   </mat-select>
 </mat-form-field>
-<div [(ngSwitch)]="selectedSection">
+<!-- switch en fonction de la section sléectionnée  avec détails/bouton d'association-->
+<div [(ngSwitch)]="selectedSection"> 
   <ng-container *ngSwitchCase="'Pièces à conviction'">
       <mat-form-field>
           <mat-select placeholder="Nom" [(ngModel)]="selectedPieceOfEvidence" #poe >

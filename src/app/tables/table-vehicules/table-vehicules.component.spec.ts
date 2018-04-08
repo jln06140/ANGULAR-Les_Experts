@@ -3,8 +3,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TableVehiculesComponent } from './table-vehicules.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatTableModule } from '@angular/material';
-import { VehiculeService } from '../../../controller/vehicule.service';
 import { HttpClientModule } from '@angular/common/http';
+import { VehiculeService } from '../../core/api/vehicule.service';
 
 describe('TableVehiculesComponent', () => {
   let component: TableVehiculesComponent;

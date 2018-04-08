@@ -25,6 +25,7 @@ export class PopupDeleteLinkComponent implements OnInit {
     this.dialogRef.close();
   }
 
+  // this.data = idCase + idVehicule
   deleteLink() {
     this.vehiculeService.deleteVehiculeLink(this.data).subscribe();
     this.close();

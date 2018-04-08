@@ -9,7 +9,7 @@ import { MatTableDataSource, MatPaginator, MatIconRegistry, MatSort } from '@ang
 })
 
 export class TableWeaponsComponent implements OnInit {
-  weaponColumns = ['createDate', 'type', 'modele', 'updateDate'];
+  weaponColumns = ['id', 'type', 'modele'];
   weaponSource;
   errText: string;
 

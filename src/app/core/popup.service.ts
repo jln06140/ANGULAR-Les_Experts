@@ -12,15 +12,16 @@ export class PopupService {
 
   constructor(public dialog: MatDialog) { }
 
-// ouverture du popup (dialog) avec le contenu de la ligne en paramètre
-  openEditVehicule(row): void {
+  // open a dialog to edit the vehicule (with the vehicule object as a paramater)
+  openEditVehicule(vehicule): void {
     const dialogRef = this.dialog.open(PopupVehiculeComponent, {
       width: '500px',
-      data: row,
+      data: vehicule,
     });
   }
 
-  openDLinkVehicule(data): void {
-    const dialogRef = this.dialog.open(PopupDeleteLinkComponent, {data});
+  // open a dialog to delete the link between the vehicule and the policeCase (with the vehicule object as a parameter )
+  openDLinkVehicule(vehicule): void {
+    const dialogRef = this.dialog.open(PopupDeleteLinkComponent, {data: vehicule});
   }
 }

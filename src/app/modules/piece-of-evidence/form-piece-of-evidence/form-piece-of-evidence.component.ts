@@ -34,10 +34,7 @@ export class FormPieceOfEvidenceComponent implements OnInit {
     this.editing = false;
     this.pieceOfEvidence = {
       type: '',
-      serialNumber: '',
-      createDate: null,
-      updateDate: null,
-      // listCase:  [],
+      serialNumber: ''
     };
     }
   }

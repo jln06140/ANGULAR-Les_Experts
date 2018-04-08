@@ -15,7 +15,7 @@ import { AffaireComponent } from './modules/affaire/affaire.component';
 import { FormAffaireComponent } from './modules/affaire/form-affaire/form-affaire.component';
 
 // router table
-const routes: Routes = [
+export const routes: Routes = [
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
     {path: 'dashboard', component: DashboardComponent},
     {path: 'newaffaire', component: FormAffaireComponent},

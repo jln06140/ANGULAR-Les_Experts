@@ -40,10 +40,7 @@ export class FormVehiculeComponent implements OnInit {
       model: '',
       marque: '',
       color: '',
-      licensePlate: '',
-      createDate: null,
-      updateDate: null,
-      listCase:  [], };
+      licensePlate: '' };
     }
   }
 

@@ -2,19 +2,11 @@
 
 This project is a web app made with 3 more people during a software developer class.
 This repository contains the Front-End part of the project.
-[Back-end repository](https://nodejs.org/)
+[Back-end repository](https://github.com/geromegrignon/SPRINGBOOT-Les_Experts/tree/master)
+
+[Formateur] Description de chaque élément de la compétence 5 commentés dans le wiki du repo (autres compétences dans le repo back-end)
 
 
-
-## Development 
-
-* Angular
-* HTML
-* CSS
-* Typescript
-* SpringBoot
-* Hibernate
-* MySQL
 
 ## Requirements
 
@@ -66,18 +58,14 @@ The edition / delete of elements from a table isn't effective dynamically and re
 Functionnality on the todo list.
 The goal is to keep track of interactions on police cases (creation, association, changes).
 
+### Associate/Create&Associate buttons
+They used to work on Hibernate back-end version of the project but not on the lastest one using JDBC.
+
 
 ## Unit tests
 
 Run `ng test` to execute the unit tests.
-
-## End-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The active test is on a request method (GET)
 
 ## V2
 
