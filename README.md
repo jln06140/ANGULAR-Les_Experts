@@ -4,14 +4,13 @@ This project is a web app made with 3 more people during a software developer cl
 This repository contains the Front-End part of the project.
 [Back-end repository](https://github.com/geromegrignon/SPRINGBOOT-Les_Experts/tree/master)
 
-[Formateur] Description de chaque élément de la compétence 5 commentés dans le wiki du repo (autres compétences dans le repo back-end)
+[Formateur] Description de chaque élément de la compétence 4 commentés dans le wiki du repo (autres compétences dans le repo back-end)
 
 
 
 ## Requirements
 
 [![npm](https://img.shields.io/badge/npm-5.8.0-green.svg)](https://www.npmjs.com/)
-[![maven](https://img.shields.io/badge/maven-3.5.3-red.svg)](https://maven.apache.org/)
 [![git](https://img.shields.io/badge/git-2.16.03-yellow.svg)](https://git-scm.com/)
 
 IDE (Eclipse, VSCode, IntelliJ...)
